@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/Animate.css">
+	<link rel="stylesheet" type="text/css" href="css/glow.css">
+	<link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+	<title>Resurgence 2020</title>
+	<link rel="icon" type="image/x-icon" href="images/icon.png">
+</head>
+<body>
+	<div id="loader">
+		<video autoplay muted src="video/Loader.mp4" type"video/mp4" class="video"></video>
+	</div>
+	<div class="invisible" id="main-content">
+		<nav class="navbar">
+			<ul class="navmenu">
+				<li class="navitems logo"><img src="images/logo.png" class="navlogo"></li>
+				<li class="null"></li>
+				<li class="navitems" onclick="home()" id="yo">Home</li>
+				<li class="navitems" onclick="events()">Events</li>
+				<li class="navitems" onclick="gallery()">Gallery</li>
+				<li class="navitems" onclick="about()">About Us</li>
+				<li class="navitems" onclick="contact()">Contact Us</li>
+			</ul>
+		</nav>
+		<div class="Landing" id="sliding-content">
+			<video class="video1" id="LandingVideo">
+				<source src="video/landing.mp4" type="video/mp4" id="test">
+			</video>
+			<video autoplay muted loop class="video2 invisible" id="LoopVideo">
+				<source src="video/loop.mp4" type="video/mp4">
+			</video>
+			<p class="ResugName GlowOnHover"> <a class="AnchorGlow">Resurgence &nbsp 2020</a> </p>
+		</div>
+	</div>
+	<script src="js/index.js"></script>
+</body>
+</html>
