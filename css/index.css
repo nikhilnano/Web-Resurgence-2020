@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap');
+/* #4a02f0 to #8c00ff */
 *
 {
 	box-sizing: border-box;
@@ -8,7 +10,8 @@
 	/* -webkit-text-stroke: 1px #D7C648; */
 }
 body {
-	background-color: #000;
+	/* background-color: #000; */
+	background-image: radial-gradient(circle, #000 55%, #8c00ff 100%);
 }
 
 /* Id Starts */
@@ -22,27 +25,30 @@ body {
 {
 	height: 100vh;
 	width: 100vw;
+	background: #000;
 }
 
 /* Id Ends */
 
 /* Class Starts */
+
 .ResugName
 {
 	position: fixed;
 	float: center;
-	top: 75vh;
-	left: 22vw;
-	font-family: 'Monoton';
-	font-size: 5rem;
-	-webkit-animation: glow 1s ease-in-out infinite alternate;
+	top: 78vh;
+	left: 280px;
+	font-family: 'Barlow Condensed';
+	font-size: 3rem;
+	letter-spacing: 50px;
+	/* -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate; */
 }
 .video
 {
 	position: fixed;
-	top: 10vh;
+	top: calc(40vh/2);
 	left: calc(50vw/2);
 	width: 50vw;
 }
@@ -54,7 +60,6 @@ body {
 	width: 50vw;
 }
 .Landing{
-	height: 100vh;
 	width: 100vw;
 }
 .invisible
@@ -95,6 +100,7 @@ body {
 .logo {
 	padding: 0;
 	border-radius: 50%;
+	background: #000;
 	-webkit-animation: boxglow 1s ease-in-out infinite alternate;
   -moz-animation: boxglow 1s ease-in-out infinite alternate;
   animation: boxglow 1s ease-in-out infinite alternate;
@@ -107,7 +113,69 @@ body {
   transition: all 0.5s;
 }
 .null {
-	width: 53.5vw;
+	width: 47.5vw;
+}
+
+.EventImages
+{
+	height: 200px;
+	width: 200px;
+}
+
+.EventImages:hover
+{
+	cursor: pointer;
+}
+
+.EventCaption:hover
+{
+	-webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+	cursor: pointer;
+}
+
+.EventCaption
+{
+	font-family: 'Monoton';
+	font-size: 1.25rem;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.Dance
+{
+	position: fixed;
+	left: 15vw;
+	top: 23vh;
+}
+
+.Theatre
+{
+	position: fixed;
+	left: 42vw;
+	top: 23vh;
+}
+
+.Music
+{
+	position: fixed;
+	left: 69vw;
+	top: 23vh;
+}
+
+.Art
+{
+	position: fixed;
+	left: 28.5vw;
+	top: 50vh;
+}
+
+.Literature
+{
+	position: fixed;
+	left: 55.5vw;
+	top: 50vh;
 }
 
 /* Class Ends */
@@ -124,10 +192,10 @@ body {
 }
 @-webkit-keyframes boxglow {
   from {
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #D7C648, 0 0 40px #D7C648, 0 0 50px #D7C648;
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #6CDAE7, 0 0 40px #6CDAE7, 0 0 50px #6CDAE7;
   }
   to {
-    box-shadow: 0 0 15px #fff, 0 0 25px #FFDB00, 0 0 35px #FFDB00, 0 0 45px #FFDB00, 0 0 55px #FFDB00;
+    box-shadow: 0 0 15px #fff, 0 0 25px #00CCCC, 0 0 35px #00CCCC, 0 0 45px #00CCCC, 0 0 55px #00CCCC;
   }
 }
 

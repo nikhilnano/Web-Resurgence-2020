@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div id="loader">
-		<video autoplay muted src="video/Loader.mp4" type"video/mp4" class="video"></video>
+		<!-- <video autoplay muted src="video/Loader.mp4" type"video/mp4" class="video"></video> -->
 	</div>
 	<div class="invisible" id="main-content">
 		<nav class="navbar">
@@ -24,16 +24,37 @@
 				<li class="navitems" onclick="contact()">Contact Us</li>
 			</ul>
 		</nav>
-		<div class="Landing" id="sliding-content">
+		<div class="Landing invisible" id="sliding-content-home">
 			<video class="video1" id="LandingVideo">
 				<source src="video/landing.mp4" type="video/mp4" id="test">
 			</video>
-			<video autoplay muted loop class="video2 invisible" id="LoopVideo">
-				<source src="video/loop.mp4" type="video/mp4">
-			</video>
-			<p class="ResugName GlowOnHover"> <a class="AnchorGlow">Resurgence &nbsp 2020</a> </p>
+			<img src="images/loop.gif" class="video2 invisible" id="LoopVideo">
+			<p class="ResugName GlowOnHover"> <a class="AnchorGlow">RESURGENCE 2020</a> </p>
+		</div>
+		<div class="Landing invisible" id="sliding-content-events">
+			<div class="Dance">
+				<img src="images/testImage.png" class="EventImages eventPage"/>
+				<p class="EventCaption eventPage">Dance</p>
+			</div>
+			<div class="Theatre">
+				<img src="images/testImage.png" class="EventImages eventPage"/>
+				<p class="EventCaption eventPage">Theatre</p>
+			</div>
+			<div class="Music">
+				<img src="images/testImage.png" class="EventImages eventPage"/>
+				<p class="EventCaption eventPage">Music</p>
+			</div>
+			<div class="Art">
+				<img src="images/testImage.png" class="EventImages eventPage"/>
+				<p class="EventCaption eventPage">Fine Arts</p>
+			</div>
+			<div class="Literature">
+				<img src="images/testImage.png" class="EventImages eventPage"/>
+				<p class="EventCaption eventPage">Literature</p>
+			</div>
 		</div>
 	</div>
+	<script src="js/lottie.js"></script>
 	<script src="js/index.js"></script>
 </body>
 </html>
