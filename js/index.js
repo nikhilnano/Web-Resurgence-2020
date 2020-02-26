@@ -1,3 +1,9 @@
+var pages = ['sliding-content-home', 'sliding-content-events',
+    'sliding-content-gallery', 'sliding-content-about',
+    'sliding-content-contact'];
+var pageHit = 1;
+var currentPage = 1;
+
 document.addEventListener("DOMContentLoaded", function(event){
   setTimeout(function() {
       const a = document.getElementById('loader');
@@ -17,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function(event){
         c.classList.add("fadeIn");
         c.classList.add("slower");
         c.addEventListener('animationend', function()	{
+          c.classList.remove("slower");
           b.autoplay = true;
           b.muted = true;
           b.load();
@@ -33,26 +40,90 @@ document.addEventListener("DOMContentLoaded", function(event){
   }, 4100);
 });
 
-function events()
+function home()
 {
-  var homePage = document.getElementById("sliding-content-home");
-  var eventPage = document.getElementById("sliding-content-events");
-  homePage.classList.add("animated");
-  homePage.classList.add("fadeOutLeft");
-  homePage.classList.add("faster");
-  homePage.addEventListener('animationend', function(){
-    homePage.classList.add("invisible");
-    eventPage.classList.remove("invisible");
-    eventPage.classList.add("animated");
-    eventPage.classList.add("fadeInRight");
-    eventPage.classList.add("fast");
-  })
+  pageHit = 1;
+  pageTransition();
 }
 
-var animation = bodymovin.loadAnimation({
-  container: document.getElementById('loader'),
-  rederer: 'svg',
-  loop: true,
-  autoplay: true,
-  path: 'loader.json'
-});
+function events()
+{
+  pageHit = 2;
+  pageTransition();
+}
+
+function gallery()
+{
+  pageHit = 3;
+  pageTransition();
+}
+
+function about()
+{
+  pageHit = 4;
+  pageTransition();
+}
+
+function contact()
+{
+  pageHit = 5;
+  pageTransition();
+}
+
+function pageTransition(){
+  console.log("Teri Maa ka bhosra", currentPage, pageHit);
+  var goToPage = document.getElementById(pages[pageHit-1]);
+  var presentPage = document.getElementById(pages[currentPage-1]);
+  console.log(goToPage, presentPage);
+  var outAnimation;
+  var inAnimation;
+  if(currentPage < pageHit)
+  {
+    outAnimation = 'fadeOutLeft';
+    inAnimation = 'fadeInRight';
+  }
+  else if (currentPage > pageHit) {
+    outAnimation = 'fadeOutRight';
+    inAnimation = 'fadeInLeft';
+  }
+  if(currentPage != pageHit)
+  {
+    presentPage.classList.add("animated");
+    presentPage.classList.add(outAnimation);
+    presentPage.classList.add("fast");
+    (function () {
+      setTimeout(function() {
+        console.log("hi");
+        presentPage.classList.add("invisible");
+        console.log("HI sss", goToPage);
+        goToPage.classList.remove("invisible");
+        console.log("Maa ki chuu", goToPage);
+        goToPage.classList.add("animated");
+        console.log("Madharcho", goToPage);
+        goToPage.classList.add(inAnimation);
+        console.log("Hatt bancho", goToPage);
+        goToPage.addEventListener('animationend', function(){
+          currentPage = pageHit;
+          console.log("bye");
+          stopAnimation(presentPage, goToPage, outAnimation, inAnimation);
+          console.log("bye2");
+        });
+      }, 1400);
+    }());
+  }
+}
+
+function stopAnimation(a, b, c, d)
+{
+  console.log(a,b,c,d);
+  a.classList.remove(c);
+  b.classList.remove(d);
+}
+
+// var animation = bodymovin.loadAnimation({
+//   container: document.getElementById('loader'),
+//   rederer: 'svg',
+//   loop: true,
+//   autoplay: true,
+//   path: 'loader.json'
+// });

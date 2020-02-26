@@ -7,19 +7,12 @@
 	padding: 0;
 	color: #fff!important;
 	/* border: 2px solid red; */
-	/* -webkit-text-stroke: 1px #D7C648; */
 }
 body {
-	/* background-color: #000; */
-	background-image: radial-gradient(circle, #000 55%, #8c00ff 100%);
+	background-image: radial-gradient(circle, #000000 55%, #8c00ff 100%);
 }
 
 /* Id Starts */
-
-#main-content {
-	height: 100vh;
-	width: 100vw;
-}
 
 #loader
 {
@@ -28,77 +21,35 @@ body {
 	background: #000;
 }
 
+#main-content {
+	height: 96.8vh;
+}
+
 /* Id Ends */
 
 /* Class Starts */
 
-.ResugName
-{
-	position: fixed;
-	float: center;
-	top: 78vh;
-	left: 280px;
-	font-family: 'Barlow Condensed';
-	font-size: 3rem;
-	letter-spacing: 50px;
-	/* -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate; */
-}
 .video
 {
 	position: fixed;
 	top: calc(40vh/2);
 	left: calc(50vw/2);
 	width: 50vw;
+	min-width: 600px;
 }
-.video1, .video2
-{
-	position: fixed;
-	top: 15vh;
-	left: calc(50vw/2);
-	width: 50vw;
-}
-.Landing{
-	width: 100vw;
-}
+
 .invisible
 {
 	display: none;
 }
-.navmenu{
-	display: flex;
-	float: right;
-	align-content: justify;
-	align-items: center;
-	padding: 1.5rem;
- 	list-style-type: none;
-}
-.navlogo{
-	height: 80px;
-	width: 80px;
-	border-radius: 50%;
-}
-.navitems{
-	float: right;
-	padding: 1vw 1vw;
-	font-size: 1.25rem;
-	color: #fff;
-  text-align: center;
-	font-family: 'Monoton';
-  /* -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate; */
-}
-.navitems:hover {
-	cursor: pointer;
-	text-decoration: none;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
-}
+
 .logo {
+	position: fixed;
+	top: 20px;
+	left: 20px;
 	padding: 0;
+	width: 80px;
+	height: 80px;
 	border-radius: 50%;
 	background: #000;
 	-webkit-animation: boxglow 1s ease-in-out infinite alternate;
@@ -112,35 +63,60 @@ body {
   -moz-transition: all 0.5s;
   transition: all 0.5s;
 }
-.null {
-	width: 47.5vw;
+
+.navlogo{
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
 }
 
-.EventImages
-{
-	height: 200px;
-	width: 200px;
+.navmenu{
+	display: flex;
+	float: right;
+	align-content: justify;
+	align-items: center;
+	padding: 1.5rem;
+ 	list-style-type: none;
 }
 
-.EventImages:hover
-{
+.navitems{
+	padding: 1vw 1.2vw;
+	font-size: 1.25rem;
+	color: #fff;
+  text-align: center;
+	font-family: 'Monoton';
+  /* -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate; */
+}
+.navitems:hover {
 	cursor: pointer;
-}
-
-.EventCaption:hover
-{
+	text-decoration: none;
 	-webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
-	cursor: pointer;
 }
 
-.EventCaption
+.windowspan{
+	width: 100vw;
+}
+
+.video1, .video2
 {
-	font-family: 'Monoton';
-	font-size: 1.25rem;
-	margin: 0 auto;
-	text-align: center;
+	position: fixed;
+	top: 15vh;
+	left: calc(50vw/2);
+	width: 50vw;
+}
+
+.ResugName
+{
+	position: fixed;
+	top: 78vh;
+	width: 100vw;
+	font-family: 'Barlow Condensed';
+	font-size: 3rem;
+	letter-spacing: 50px;
 }
 
 .Dance
@@ -178,16 +154,39 @@ body {
 	top: 50vh;
 }
 
+.EventImages
+{
+	height: 180px;
+	width: 180px;
+	border-radius: 50%;
+}
+
+.EventCaption
+{
+	font-family: 'Monoton';
+	font-size: 1.25rem;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.EventCaption:hover
+{
+	-webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+	cursor: pointer;
+}
+
 /* Class Ends */
 
 /* Animation Starts */
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #d7c648, 0 0 40px #d7c648;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #6CDAE7, 0 0 40px #6CDAE7;
   }
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ffdb00, 0 0 40px #ffdb00, 0 0 50px #ffdb00;
+    text-shadow: 0 0 20px #fff, 0 0 30px #6CDAE7, 0 0 40px #6CDAE7, 0 0 50px #6CDAE7;
   }
 }
 @-webkit-keyframes boxglow {
