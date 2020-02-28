@@ -100,13 +100,21 @@ function pageTransition(){
     Nav.classList.add("animated");
     Nav.classList.add("fadeOut");
     Nav.classList.add("faster");
+    console.log("PageHit = ",pageHit);
 
     setTimeout(function(){
       if(pageHit == 1)
       {
         var i=0;
         for(i=0; i<navItems.length; i++){
-          document.getElementById(navItems[i]).style.fontFamily="Barlow Condensed";
+          document.getElementById(navItems[i]).classList.add('navitems');
+          if(currentPage==2)
+          {
+            document.getElementById(navItems[i]).classList.remove("navitemsEvent");
+          }
+          else {
+            document.getElementById(navItems[i]).classList.remove("navitems1");
+          }
         }
       }
 
@@ -114,7 +122,16 @@ function pageTransition(){
         var i=0;
         for(i=0; i<navItems.length; i++){
           console.log("Done");
-          document.getElementById(navItems[i]).style.fontFamily="Amatic SC";
+          document.getElementById(navItems[i]).classList.remove('navitems');
+          if(pageHit==2)
+          {
+            document.getElementById(navItems[i]).classList.add("navitemsEvent");
+            console.log(document.getElementById(navItems[i]));
+          }
+          else {
+            document.getElementById(navItems[i]).classList.remove("navitemsEvent");
+            document.getElementById(navItems[i]).classList.add("navitems1");
+          }
         }
       }
       Nav.classList.remove("fadeOut");

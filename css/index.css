@@ -119,6 +119,26 @@
   animation: glow 1s ease-in-out infinite alternate;
 }
 
+.navitemsEvent{
+	padding: 1vw 1.2vw;
+	font-size: 1.25rem;
+	color: #8c00ff!important;
+	font-weight: bold;
+	text-shadow: 1px 1px #8c00ffaa;
+  text-align: center;
+	font-family: 'Amatic SC';
+  /* -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate; */
+}
+.navitemsEvent:hover {
+	cursor: pointer;
+	text-decoration: none;
+	-webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
 .windowspan{
 	width: 100vw;
 }
@@ -178,15 +198,22 @@
 
 .EventImages
 {
-	height: 180px;
-	width: 180px;
+	height: 120px;
+	width: 120px;
 	border-radius: 50%;
+}
+.EventImages:hover
+{
+	cursor: pointer;
 }
 
 .EventCaption
 {
-	font-family: 'Monoton';
-	font-size: 1.25rem;
+	font-family: 'Amatic SC';
+	font-weight: bold;
+	text-shadow: 1px 1px #8c00ffaa;
+	color: #8c00ff!important;
+	font-size: 2rem;
 	margin: 0 auto;
 	text-align: center;
 }
