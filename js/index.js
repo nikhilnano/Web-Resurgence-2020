@@ -1,9 +1,11 @@
 var pages = ['sliding-content-home', 'sliding-content-events',
     'sliding-content-gallery', 'sliding-content-about',
     'sliding-content-contact'];
+var navItems = ['homeNav','eventsNav','galleryNav','aboutNav','contactNav'];
 var pageHit = 1;
 var currentPage = 1;
 var transition = 0;
+var body = document.getElementById("theBody");
 
 document.addEventListener("DOMContentLoaded", function(event){
   setTimeout(function() {
@@ -45,6 +47,8 @@ document.addEventListener("DOMContentLoaded", function(event){
 function home()
 {
   if(transition == 0){
+    theBody.classList.remove("eventBody");
+    theBody.classList.add("pageBody");
     pageHit = 1;
     pageTransition();
   }
@@ -53,6 +57,8 @@ function home()
 function events()
 {
   if(transition == 0){
+    theBody.classList.remove("pageBody");
+    theBody.classList.add("eventBody");
     pageHit = 2;
     pageTransition();
   }
@@ -60,6 +66,8 @@ function events()
 
 function gallery()
 {
+  theBody.classList.remove("eventBody");
+  theBody.classList.add("pageBody");
   if(transition == 0){
     pageHit = 3;
     pageTransition();
@@ -68,6 +76,8 @@ function gallery()
 
 function about()
 {
+  theBody.classList.remove("eventBody");
+  theBody.classList.add("pageBody");
   if(transition == 0){
     pageHit = 4;
     pageTransition();
@@ -76,6 +86,8 @@ function about()
 
 function contact()
 {
+  theBody.classList.remove("eventBody");
+  theBody.classList.add("pageBody");
   if(transition == 0){
     pageHit = 5;
     pageTransition();
@@ -83,8 +95,32 @@ function contact()
 }
 
 function pageTransition(){
+  var Nav = document.getElementById("navbar");
+  if(pageHit != currentPage){
+    Nav.classList.add("animated");
+    Nav.classList.add("fadeOut");
+    Nav.classList.add("faster");
+
+    setTimeout(function(){
+      if(pageHit == 1)
+      {
+        var i=0;
+        for(i=0; i<navItems.length; i++){
+          document.getElementById(navItems[i]).style.fontFamily="Barlow Condensed";
+        }
+      }
+
+      else{
+        var i=0;
+        for(i=0; i<navItems.length; i++){
+          console.log("Done");
+          document.getElementById(navItems[i]).style.fontFamily="Amatic SC";
+        }
+      }
+      Nav.classList.remove("fadeOut");
+    }, 200);
+  }
   transition = 1;
-  console.log("Teri Maa ka bhosra", currentPage, pageHit);
   var goToPage = document.getElementById(pages[pageHit-1]);
   var presentPage = document.getElementById(pages[currentPage-1]);
   console.log(goToPage, presentPage);
@@ -108,6 +144,7 @@ function pageTransition(){
     goToPage.classList.add(inAnimation);
     (function () {
       setTimeout(function() {
+        Nav.classList.add("fadeIn");
         console.log("hi");
         presentPage.classList.add("invisible");
         goToPage.classList.remove("invisible");

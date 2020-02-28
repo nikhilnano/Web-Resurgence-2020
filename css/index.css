@@ -6,12 +6,12 @@
 	margin: 0;
 	padding: 0;
 	color: #fff!important;
+	/* overflow-x: hidden;  */
 	/* border: 2px solid red; */
 }
-body {
+.pageBody {
 	background-image: radial-gradient(circle, #000000 55%, #8c00ff 100%);
 }
-
 /* Id Starts */
 
 #loader
@@ -88,12 +88,30 @@ body {
 	font-size: 1.25rem;
 	color: #fff;
   text-align: center;
-	font-family: 'Monoton';
+	font-family: 'Barlow Condensed';
   /* -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate; */
 }
 .navitems:hover {
+	cursor: pointer;
+	text-decoration: none;
+	-webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.navitems1{
+	padding: 1vw 1.2vw;
+	font-size: 1.25rem;
+	color: #fff;
+  text-align: center;
+	font-family: 'Amatic SC';
+  /* -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate; */
+}
+.navitems1:hover {
 	cursor: pointer;
 	text-decoration: none;
 	-webkit-animation: glow 1s ease-in-out infinite alternate;

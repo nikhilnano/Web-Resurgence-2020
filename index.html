@@ -3,25 +3,27 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="css/Animate.css">
 	<link rel="stylesheet" type="text/css" href="css/bubbles.css">
+	<link rel="stylesheet" type="text/css" href="css/eventBack.css">
 	<link rel="stylesheet" type="text/css" href="css/glow.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
 	<title>Resurgence 2020</title>
 	<link rel="icon" type="image/x-icon" href="images/icon.png">
 </head>
-<body>
+<body class="pageBody" id="theBody">
 	<div id="loader">
 		<video autoplay muted src="video/Loader.mp4" type"video/mp4" class="video"></video>
 	</div>
 	<div class="invisible" id="main-content">
-		<div class="navbar logo" onclick="home()"> <img src="images/logo.png" class="navlogo"> </div>
-		<nav class="navbar navbae">
+		<div class="logo" onclick="home()"> <img src="images/logo.png" class="navlogo"> </div>
+		<nav class="navbae" id="navbar">
 			<ul class="navmenu">
-				<li class="navitems" onclick="home()" id="yo">Home</li>
-				<li class="navitems" onclick="events()">Events</li>
-				<li class="navitems" onclick="gallery()">Gallery</li>
-				<li class="navitems" onclick="about()">About Us</li>
-				<li class="navitems" onclick="contact()">Contact Us</li>
+				<li class="navitems" onclick="home()" id="homeNav">Home</li>
+				<li class="navitems" onclick="events()" id="eventsNav">Events</li>
+				<li class="navitems" onclick="gallery()" id="galleryNav">Gallery</li>
+				<li class="navitems" onclick="about()" id="aboutNav">About Us</li>
+				<li class="navitems" onclick="contact()" id="contactNav">Contact Us</li>
 			</ul>
 		</nav>
 		<div class="windowspan invisible" id="sliding-content-home">
@@ -32,6 +34,215 @@
 			<p class="ResugName GlowOnHover"> <a class="AnchorGlow"> RESURGENCE 2020 </a> </p>
 		</div>
 		<div class="windowspan invisible" id="sliding-content-events">
+			<svg version='1.1' xmlns='http://www.w3.org/2000/svg'>
+  		<defs>
+    		<filter id='goo'>
+      		<fegaussianblur in='SourceGraphic' result='blur' stddeviation='10'></fegaussianblur>
+      		<fecolormatrix in='blur' mode='matrix' result='goo' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7'></fecolormatrix>
+      		<feblend in2='goo' in='SourceGraphic'></feblend>
+    	</filter>
+  	</defs>
+		</svg>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
+			<span class='particle'></span>
 			<div class id="background-wrap">
     		<div class="bubble" id="x1" onclick = "burst1()"></div>
     		<div class="bubble" id="x2" onclick = "burst2()"></div>
@@ -80,7 +291,6 @@
 			<p class="ResugName GlowOnHover">Hume Baat Hi nahi Karni..</p>
 		</div>
 	</div>
-	<script src="js/lottie.js"></script>
 	<script src="js/index.js"></script>
 </body>
 </html>
