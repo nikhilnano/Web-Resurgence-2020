@@ -3,6 +3,7 @@ var pages = ['sliding-content-home', 'sliding-content-events',
     'sliding-content-contact'];
 var pageHit = 1;
 var currentPage = 1;
+var transition = 0;
 
 document.addEventListener("DOMContentLoaded", function(event){
   setTimeout(function() {
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function(event){
         c.classList.add("fadeIn");
         c.classList.add("slower");
         c.addEventListener('animationend', function()	{
+          c.classList.remove("fadeIn");
           c.classList.remove("slower");
           b.autoplay = true;
           b.muted = true;
@@ -42,35 +44,46 @@ document.addEventListener("DOMContentLoaded", function(event){
 
 function home()
 {
-  pageHit = 1;
-  pageTransition();
+  if(transition == 0){
+    pageHit = 1;
+    pageTransition();
+  }
 }
 
 function events()
 {
-  pageHit = 2;
-  pageTransition();
+  if(transition == 0){
+    pageHit = 2;
+    pageTransition();
+  }
 }
 
 function gallery()
 {
-  pageHit = 3;
-  pageTransition();
+  if(transition == 0){
+    pageHit = 3;
+    pageTransition();
+  }
 }
 
 function about()
 {
-  pageHit = 4;
-  pageTransition();
+  if(transition == 0){
+    pageHit = 4;
+    pageTransition();
+  }
 }
 
 function contact()
 {
-  pageHit = 5;
-  pageTransition();
+  if(transition == 0){
+    pageHit = 5;
+    pageTransition();
+  }
 }
 
 function pageTransition(){
+  transition = 1;
   console.log("Teri Maa ka bhosra", currentPage, pageHit);
   var goToPage = document.getElementById(pages[pageHit-1]);
   var presentPage = document.getElementById(pages[currentPage-1]);
@@ -91,25 +104,27 @@ function pageTransition(){
     presentPage.classList.add("animated");
     presentPage.classList.add(outAnimation);
     presentPage.classList.add("fast");
+    goToPage.classList.add("animated");
+    goToPage.classList.add(inAnimation);
     (function () {
       setTimeout(function() {
         console.log("hi");
         presentPage.classList.add("invisible");
-        console.log("HI sss", goToPage);
         goToPage.classList.remove("invisible");
-        console.log("Maa ki chuu", goToPage);
-        goToPage.classList.add("animated");
-        console.log("Madharcho", goToPage);
-        goToPage.classList.add(inAnimation);
-        console.log("Hatt bancho", goToPage);
+        //goToPage.classList.add("animated");
+        //goToPage.classList.add(inAnimation);
         goToPage.addEventListener('animationend', function(){
+          transition = 0;
           currentPage = pageHit;
           console.log("bye");
           stopAnimation(presentPage, goToPage, outAnimation, inAnimation);
           console.log("bye2");
         });
-      }, 1400);
+      }, 500);
     }());
+  }
+  else {
+    transition = 0;
   }
 }
 
@@ -120,6 +135,140 @@ function stopAnimation(a, b, c, d)
   b.classList.remove(d);
 }
 
+function burst1()
+{
+  var bubble = document.getElementById("x1");
+  bubble.classList.add("invisible");
+  setTimeout(function() {
+    bubble.classList.remove("invisible");
+  }, 500);
+}
+
+function burst2()
+{
+  var bubble = document.getElementById("x2");
+  bubble.classList.add("invisible");
+  setTimeout(function() {
+    bubble.classList.remove("invisible");
+  }, 500);
+}
+
+function burst3()
+{
+  var bubble = document.getElementById("x3");
+  bubble.classList.add("invisible");
+  setTimeout(function() {
+    bubble.classList.remove("invisible");
+  }, 500);
+}
+
+function burst4()
+{
+  var bubble = document.getElementById("x4");
+  bubble.classList.add("invisible");
+  setTimeout(function() {
+    bubble.classList.remove("invisible");
+  }, 500);
+}
+
+function burst5()
+{
+  var bubble = document.getElementById("x5");
+  bubble.classList.add("invisible");
+  setTimeout(function() {
+    bubble.classList.remove("invisible");
+  }, 500);
+}
+
+function burst6()
+{
+  var bubble = document.getElementById("x6");
+  bubble.classList.add("invisible");
+  setTimeout(function() {
+    bubble.classList.remove("invisible");
+  }, 500);
+}
+
+function burst7()
+{
+  var bubble = document.getElementById("x7");
+  bubble.classList.add("invisible");
+  setTimeout(function() {
+    bubble.classList.remove("invisible");
+  }, 500);
+}
+
+function burst8()
+{
+  var bubble = document.getElementById("x8");
+  bubble.classList.add("invisible");
+  setTimeout(function() {
+    bubble.classList.remove("invisible");
+  }, 500);
+}
+
+function burst9()
+{
+  var bubble = document.getElementById("x9");
+  bubble.classList.add("invisible");
+  setTimeout(function() {
+    bubble.classList.remove("invisible");
+  }, 500);
+}
+
+function burst10()
+{
+  var bubble = document.getElementById("x10");
+  bubble.classList.add("invisible");
+  setTimeout(function() {
+    bubble.classList.remove("invisible");
+  }, 500);
+}
+
+function burst11()
+{
+  var bubble = document.getElementById("x11");
+  bubble.classList.add("invisible");
+  setTimeout(function() {
+    bubble.classList.remove("invisible");
+  }, 500);
+}
+
+function burst12()
+{
+  var bubble = document.getElementById("x12");
+  bubble.classList.add("invisible");
+  setTimeout(function() {
+    bubble.classList.remove("invisible");
+  }, 500);
+}
+
+function burst13()
+{
+  var bubble = document.getElementById("x13");
+  bubble.classList.add("invisible");
+  setTimeout(function() {
+    bubble.classList.remove("invisible");
+  }, 500);
+}
+
+function burst14()
+{
+  var bubble = document.getElementById("x14");
+  bubble.classList.add("invisible");
+  setTimeout(function() {
+    bubble.classList.remove("invisible");
+  }, 500);
+}
+
+function burst15()
+{
+  var bubble = document.getElementById("x15");
+  bubble.classList.add("invisible");
+  setTimeout(function() {
+    bubble.classList.remove("invisible");
+  }, 500);
+}
 // var animation = bodymovin.loadAnimation({
 //   container: document.getElementById('loader'),
 //   rederer: 'svg',

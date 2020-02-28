@@ -2,6 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/Animate.css">
+	<link rel="stylesheet" type="text/css" href="css/bubbles.css">
 	<link rel="stylesheet" type="text/css" href="css/glow.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
@@ -13,8 +14,8 @@
 		<video autoplay muted src="video/Loader.mp4" type"video/mp4" class="video"></video>
 	</div>
 	<div class="invisible" id="main-content">
-		<div class="logo"> <img src="images/logo.png" class="navlogo"> </div>
-		<nav class="navbae">
+		<div class="navbar logo" onclick="home()"> <img src="images/logo.png" class="navlogo"> </div>
+		<nav class="navbar navbae">
 			<ul class="navmenu">
 				<li class="navitems" onclick="home()" id="yo">Home</li>
 				<li class="navitems" onclick="events()">Events</li>
@@ -31,6 +32,23 @@
 			<p class="ResugName GlowOnHover"> <a class="AnchorGlow"> RESURGENCE 2020 </a> </p>
 		</div>
 		<div class="windowspan invisible" id="sliding-content-events">
+			<div class id="background-wrap">
+    		<div class="bubble" id="x1" onclick = "burst1()"></div>
+    		<div class="bubble" id="x2" onclick = "burst2()"></div>
+    		<div class="bubble " id="x3" onclick = "burst3()"></div>
+    		<div class="bubble " id="x4" onclick = "burst4()"></div>
+    		<div class="bubble " id="x5" onclick = "burst5()"></div>
+    		<div class="bubble " id="x6" onclick = "burst6()"></div>
+    		<div class="bubble" id="x7" onclick = "burst7()"></div>
+    		<div class="bubble " id="x8" onclick = "burst8()"></div>
+    		<div class="bubble " id="x9" onclick = "burst9()"></div>
+    		<div class="bubble " id="x10" onclick = "burst10()"></div>
+				<div class="bubble " id="x11" onclick = "burst11()"></div>
+				<div class="bubble " id="x12" onclick = "burst12()"></div>
+				<div class="bubble " id="x13" onclick = "burst13()"></div>
+				<div class="bubble " id="x14" onclick = "burst14()"></div>
+				<div class="bubble " id="x15" onclick = "burst15()"></div>
+			</div>
 			<div class="Dance">
 				<img src="images/testImage.png" class="EventImages eventPage"/>
 				<p class="EventCaption eventPage">Dance</p>
