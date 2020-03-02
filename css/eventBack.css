@@ -8,6 +8,12 @@
   filter: url("#goo");
 }
 
+.particleBack {
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+}
+
 .particle {
   position: absolute;
   border-radius: 50%;

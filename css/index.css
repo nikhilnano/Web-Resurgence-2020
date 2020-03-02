@@ -334,7 +334,7 @@
 	width: 100vw;
 	background-color:#ffffff;
     opacity: 0.7;
-
+	z-index: 102;
 }
 
 .text-box{
@@ -347,11 +347,42 @@
 	top: 200px;
 	left: 300px;
 	padding: 100px;
-	z-index: 102;
+	z-index: 103;
 }
 
 .opac{
     opacity: 0.5
+}
+
+.aboutText{
+	position: fixed;
+	height: auto;
+	width: auto;
+	font-family: 'Amatic SC';
+	font-size: 1.5rem;
+	top: 22vh;
+	left: 10vw;
+}
+
+.aboutText-1{
+	position: fixed;;
+	height: auto;
+	width: auto;
+	font-family: 'Amatic SC';
+	font-size: 1.5rem;
+	top: 26vh;
+	left: 13vw;
+}
+
+.aboutText-2{
+	position: fixed;
+	height: auto;
+	width: auto;
+	font-family: 'Amatic SC';
+	font-size: 1.5rem;
+	top: 42vh;
+	left: 10vw;
+	right: 10vw;
 }
 
 /* Class Ends */

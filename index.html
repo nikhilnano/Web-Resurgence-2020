@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bubbles.css">
 	<link rel="stylesheet" type="text/css" href="css/eventBack.css">
 	<link rel="stylesheet" type="text/css" href="css/glow.css">
+	<link rel="stylesheet" type="text/css" href="css/cards.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
@@ -14,7 +15,7 @@
 </head>
 <body class="pageBody" id="theBody">
 	<div id="loader">
-		<video autoplay muted src="video/Loader.mp4" type"video/mp4" class="video"></video>
+		<video autoplay muted src="video/Loader.mp4" type"video/mp4" class="video" id="loadingVideo"></video>
 	</div>
 	<div class="invisible" id="main-content">
 		<div class="logo" onclick="home()"> <img src="images/logo.png" class="navlogo"> </div>
@@ -22,7 +23,7 @@
 			<ul class="navmenu">
 				<li class="navitems" onclick="home()" id="homeNav">Home</li>
 				<li class="navitems" onclick="events()" id="eventsNav">Events</li>
-				<li class="navitems" onclick="gallery()" id="galleryNav">Gallery</li>
+				<li class="navitems" onclick="team()" id="teamNav">Team</li>
 				<li class="navitems" onclick="about()" id="aboutNav">About Us</li>
 				<li class="navitems" onclick="contact()" id="contactNav">Contact Us</li>
 			</ul>
@@ -301,17 +302,87 @@
 			</div>
 		</div>
 	</div>
-		<div class="windowspan invisible" id="sliding-content-gallery">
+		<div class="windowspan invisible" id="sliding-content-team">
 			<p class="ResugName GlowOnHover">Coming Soon...</p>
 		</div>
 		<div class="windowspan invisible" id="sliding-content-about">
+			<div class="cards invisible" id="cardsMain">
+  <div class="card">
+    <div class="card-face">
+      <div class="card-label">
+      </div>
+    </div>
+   </div>
+  <div class="card">
+    <div class="card-face">
+      <div class="card-label">
+      </div>
+    </div>
+   </div>
+  <div class="card">
+    <div class="card-face">
+      <div class="card-label">
+      </div>
+    </div>
+   </div>
+  <div class="card">
+    <div class="card-face">
+      <div class="card-label">
+      </div>
+    </div>
+   </div>
+  <div class="card">
+    <div class="card-face">
+      <div class="card-label">
+      </div>
+    </div>
+   </div>
+  <div class="card">
+    <div class="card-face">
+      <div class="card-label">
+      </div>
+    </div>
+   </div>
+  <div class="card">
+    <div class="card-face">
+      <div class="card-label">
+      </div>
+    </div>
+   </div>
+  <div class="card">
+    <div class="card-face">
+      <div class="card-label">
+      </div>
+    </div>
+   </div>
+  <div class="card">
+    <div class="card-face">
+      <div class="card-label">
+      </div>
+    </div>
+   </div>
+  <div class="card">
+    <div class="card-face">
+      <div class="card-label">
+      </div>
+    </div>
+   </div>
+  <div class="card">
+    <div class="card-face">
+      <div class="card-label">
+      </div>
+    </div>
+   </div>
+</div>
 			<p class="aboutText">Resurgence, one of the largest college cultural festival in north India, has developed over the years into so much more:
-				<ul>
+				<ul class="aboutText-1">
 					<li>A melting pot of Indian culture.</li>
 					<li>A launchpad of upcoming artists.</li>
 					<li>A spectacular showcase of talent.</li>
 					<li>An epitome of incredible human experience.</li>
 				</ul>
+			</p>
+			<p class="aboutText-2">
 				where you can just have it all, and whatever you do lasts a lifetime, where friendsihps are born and memories are made amidst the gleam of several events as the competition intensify.
 				Our mission is to bring along all of you and revitalize you with extreme amounts of pure happiness and bliss, and also serve as an escape from all the bitterness in our lives.
 				This is what drives us into making it big this year!

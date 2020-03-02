@@ -1,7 +1,7 @@
 var pages = ['sliding-content-home', 'sliding-content-events',
-    'sliding-content-gallery', 'sliding-content-about',
+    'sliding-content-team', 'sliding-content-about',
     'sliding-content-contact'];
-var navItems = ['homeNav','eventsNav','galleryNav','aboutNav','contactNav'];
+var navItems = ['homeNav','eventsNav','teamNav','aboutNav','contactNav'];
 var pageHit = 1;
 var currentPage = 1;
 var transition = 0;
@@ -70,7 +70,7 @@ window.addEventListener('mousewheel', function(e){
       if(currentPage==1)
         events();
       else if(currentPage==2)
-        gallery();
+        team();
       else if(currentPage==3)
         about();
       else if(currentPage==4)
@@ -86,7 +86,7 @@ window.addEventListener('mousewheel', function(e){
           else if(currentPage==3)
             events();
           else if(currentPage==4)
-            gallery();
+            team();
           else if(currentPage==5)
             about();
     }
@@ -118,22 +118,22 @@ function afterLoad()
       b.load();
     });
     (function () {
-      setTimeout(function() {
+      document.getElementById("LandingVideo").addEventListener('ended',function() {
           console.log('End');
           var e = document.getElementById('LoopVideo');
           b.classList.add('invisible');
           e.classList.remove('invisible');
-      }, 3800);
+      });
     }());
   });
 }
 
 document.addEventListener("DOMContentLoaded", function(event){
-  setTimeout(function() {
+  document.getElementById("loadingVideo").addEventListener('ended',function() {
     console.log("Hi");
     $(window).on("load", afterLoad());
 
-  }, 4100);
+  });
 });
 
 function home()
@@ -141,6 +141,7 @@ function home()
   if(transition == 0){
     theBody.classList.remove("eventBody");
     theBody.classList.add("pageBody");
+    theBody.classList.remove("cardBody");
     pageHit = 1;
     pageTransition();
   }
@@ -154,18 +155,22 @@ function events()
   document.getElementById("sliding-content-events-click").classList.remove("animated");
   document.getElementById("sliding-content-events-click").classList.remove("zoomIn");
   document.getElementById("sliding-content-events-click").classList.add("invisible");
+  document.getElementById("blurs").classList.add("invisible");
+  document.getElementById("textbox").classList.add("invisible");
   if(transition == 0){
     theBody.classList.remove("pageBody");
     theBody.classList.add("eventBody");
+    theBody.classList.remove("cardBody");
     pageHit = 2;
     pageTransition();
   }
 }
 
-function gallery()
+function team()
 {
   theBody.classList.remove("eventBody");
   theBody.classList.add("pageBody");
+  theBody.classList.remove("cardBody");
   if(transition == 0){
     pageHit = 3;
     pageTransition();
@@ -175,7 +180,8 @@ function gallery()
 function about()
 {
   theBody.classList.remove("eventBody");
-  theBody.classList.add("pageBody");
+  theBody.classList.remove("pageBody");
+  theBody.classList.add("cardBody");
   if(transition == 0){
     pageHit = 4;
     pageTransition();
@@ -186,6 +192,7 @@ function contact()
 {
   theBody.classList.remove("eventBody");
   theBody.classList.add("pageBody");
+  theBody.classList.remove("cardBody");
   if(transition == 0){
     pageHit = 5;
     pageTransition();
@@ -252,9 +259,19 @@ function pageTransition(){
   }
   if(currentPage != pageHit)
   {
+
+    if(currentPage==4 && pageHit!=4)
+    {
+      document.getElementById("cardsMain").classList.add("invisible");
+    }
+    // if(currentPage==2 && pageHit!=2)
+    // {
+    //   document.getElementById("pBack").classList.add("invisible");
+    //   document.getElementById("background-wrap").classList.add("invisible");
+    // }
     presentPage.classList.add("animated");
     presentPage.classList.add(outAnimation);
-    presentPage.classList.add("fast");
+    presentPage.classList.add("faster");
     goToPage.classList.add("animated");
     goToPage.classList.add(inAnimation);
     (function () {
@@ -268,6 +285,13 @@ function pageTransition(){
         goToPage.addEventListener('animationend', function(){
           transition = 0;
           currentPage = pageHit;
+          if(currentPage==4){
+            document.getElementById("cardsMain").classList.remove("invisible");
+          }
+          // if(currentPage==2){
+          //   document.getElementById("pBack").classList.remove("invisible");
+          //   document.getElementById("background-wrap").classList.remove("invisible");
+          // }
           console.log("bye");
           stopAnimation(presentPage, goToPage, outAnimation, inAnimation);
           console.log("bye2");
