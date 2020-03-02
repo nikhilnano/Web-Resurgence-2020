@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/eventBack.css">
 	<link rel="stylesheet" type="text/css" href="css/glow.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
 	<title>Resurgence 2020</title>
@@ -30,7 +31,8 @@
 			<video class="video1" id="LandingVideo">
 				<source src="video/landing.mp4" type="video/mp4" id="test">
 			</video>
-			<img src="images/loop.gif" class="video2 invisible" id="LoopVideo">
+			<video src="video/loop.mp4" autoplay muted loop class="video2 invisible" id="LoopVideo">
+			</video>
 			<p class="ResugName GlowOnHover"> <a class="AnchorGlow"> RESURGENCE 2020 </a> </p>
 		</div>
 		<div class="windowspan invisible" id="sliding-content-events">
@@ -322,11 +324,5 @@
 		</div>
 	</div>
 	<script src="js/index.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script>
-		$(window).load(function() {
-			$('#loader').hide();
-		});
-	</script>
 </body>
 </html>
