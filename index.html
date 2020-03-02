@@ -260,32 +260,62 @@
 				<div class="bubble " id="x14" onclick = "burst14()"></div>
 				<div class="bubble " id="x15" onclick = "burst15()"></div>
 			</div>
-			<div class="Dance">
-				<img src="images/testImage.png" class="EventImages eventPage"/>
-				<p class="EventCaption eventPage">Dance</p>
+			<div class="windowspan" id="sliding-content-events-no-click">
+				<div class="Dance" onclick="danceEvent()">
+					<img src="images/testImage.png" class="EventImages eventPage" id="danceImage"/>
+					<p class="EventCaption eventPage">Dance</p>
+				</div>
+				<div class="Theatre" onclick="theatreEvent()">
+					<img src="images/testImage2.png" class="EventImages eventPage" id="theatreImage"/>
+					<p class="EventCaption eventPage">Theatre</p>
+				</div>
+				<div class="Music" onclick="musicEvent()">
+					<img src="images/testImage3.png" class="EventImages eventPage" id="musicImage"/>
+					<p class="EventCaption eventPage">Music</p>
+				</div>
+				<div class="Art" onclick="artEvent()">
+					<img src="images/testImage.png" class="EventImages eventPage" id="artImage"/>
+					<p class="EventCaption eventPage">Fine Arts</p>
+				</div>
+				<div class="Literature" onclick="literatureEvent()">
+					<img src="images/testImage.png" class="EventImages eventPage" id="literatureImage"/>
+					<p class="EventCaption eventPage">Literature</p>
+				</div>
+		</div>
+		<div class="windowspan invisible" id="sliding-content-events-click">
+			<img src="images/testImage.png" class="eventClickImg" id="eventImg"/>
+			<div class="sub-content" id="subcontent">
 			</div>
-			<div class="Theatre">
-				<img src="images/testImage.png" class="EventImages eventPage"/>
-				<p class="EventCaption eventPage">Theatre</p>
+			<div class="sub-content-1" id="subcontent1">
 			</div>
-			<div class="Music">
-				<img src="images/testImage.png" class="EventImages eventPage"/>
-				<p class="EventCaption eventPage">Music</p>
+			<div class="sub-content-2" id="subcontent2">
 			</div>
-			<div class="Art">
-				<img src="images/testImage.png" class="EventImages eventPage"/>
-				<p class="EventCaption eventPage">Fine Arts</p>
+			<div class="sub-content-3" id="subcontent3">
 			</div>
-			<div class="Literature">
-				<img src="images/testImage.png" class="EventImages eventPage"/>
-				<p class="EventCaption eventPage">Literature</p>
+    	<div class="blur invisible" id="blurs">
+    	</div>
+
+    	<div class="text-box invisible" id="textbox">
 			</div>
 		</div>
+	</div>
 		<div class="windowspan invisible" id="sliding-content-gallery">
 			<p class="ResugName GlowOnHover">Coming Soon...</p>
 		</div>
 		<div class="windowspan invisible" id="sliding-content-about">
-			<p class="ResugName GlowOnHover">Kya Hi Karoge Jaan Ke..</p>
+			<p class="aboutText">Resurgence, one of the largest college cultural festival in north India, has developed over the years into so much more:
+				<ul>
+					<li>A melting pot of Indian culture.</li>
+					<li>A launchpad of upcoming artists.</li>
+					<li>A spectacular showcase of talent.</li>
+					<li>An epitome of incredible human experience.</li>
+				</ul>
+				where you can just have it all, and whatever you do lasts a lifetime, where friendsihps are born and memories are made amidst the gleam of several events as the competition intensify.
+				Our mission is to bring along all of you and revitalize you with extreme amounts of pure happiness and bliss, and also serve as an escape from all the bitterness in our lives.
+				This is what drives us into making it big this year!
+				Embrace yourslf for a cultural extravaganza:
+				Join us this year from 17th April - 19th April at Resurgence'20, Shri Mata Vaishno Devi University.
+			</p>
 		</div>
 		<div class="windowspan invisible" id="sliding-content-contact">
 			<p class="ResugName GlowOnHover">Hume Baat Hi nahi Karni..</p>

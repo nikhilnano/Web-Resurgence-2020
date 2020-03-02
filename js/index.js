@@ -7,6 +7,61 @@ var currentPage = 1;
 var transition = 0;
 var body = document.getElementById("theBody");
 
+// //cursor animation starts
+// Create empty
+// var bubbletrail= {};
+//
+//
+//
+// // Add public parameters with default values
+// bubbletrail.size= 10;
+// bubbletrail.jitter= 50;
+// bubbletrail.zindex= 5;
+// bubbletrail.life= 1000;
+//
+//
+//
+// // Create after the page is loaded
+// window.onload= function() {
+// 	window.addEventListener('mousemove', function(e) {
+// 		// Animate one dot
+// 		var animate= function(i) {
+// 			var j= (1-i)*bubbletrail.jitter;
+// 			var bubble= document.createElement('div');
+// 			var size= Math.ceil(Math.random()*bubbletrail.size*i);
+// 			var sizepx= size+'px';
+// 			bubble.style.position= 'fixed';
+// 			bubble.style.top=  e.pageY +
+// 				Math.round((Math.random()-0.5)*j - size/2) + 'px';
+// 			bubble.style.left= e.pageX +
+// 				Math.round((Math.random()-0.5)*j - size/2) + 'px';
+// 			bubble.style.width= sizepx;
+// 			bubble.style.height= sizepx;
+// 			bubble.style.background= 'hsla(' +
+// 				Math.round(Math.random()*360) + ', ' +
+// 				'100%, ' +
+// 				'50%, ' +
+// 				i + ')';
+// 			bubble.style.borderRadius= sizepx;
+// 			bubble.style.pointerEvents= 'none';
+// 			bubble.style.zIndex= bubbletrail.zindex +
+// 				Math.round(5*(Math.random()-0.5));
+// 			document.body.appendChild(bubble);
+// 			window.setTimeout(function() {
+// 				document.body.removeChild(bubble);
+// 			}, Math.round(Math.random()*i*bubbletrail.life));
+// 		};
+// 		// Create a bunch of dots
+// 		for (var i= 0.2; i <= 1.0; i+= 0.2) {
+// 			animate(i);
+// 		}
+// 	});
+// };
+
+//cursor animation ends
+
+
+
 window.addEventListener('mousewheel', function(e){
     wDelta = e.wheelDelta < 0 ? 'down' : 'up';
     console.log(wDelta);
@@ -54,10 +109,10 @@ document.addEventListener("DOMContentLoaded", function(event){
         c.classList.remove("invisible");
         c.classList.add("animated");
         c.classList.add("fadeIn");
-        c.classList.add("slower");
+        // c.classList.add("slower");
         c.addEventListener('animationend', function()	{
           c.classList.remove("fadeIn");
-          c.classList.remove("slower");
+          // c.classList.remove("slower");
           b.autoplay = true;
           b.muted = true;
           b.load();
@@ -86,6 +141,12 @@ function home()
 
 function events()
 {
+  document.getElementById("sliding-content-events-no-click").classList.remove("animated");
+  document.getElementById("sliding-content-events-no-click").classList.remove("zoomOut");
+  document.getElementById("sliding-content-events-no-click").classList.remove("invisible");
+  document.getElementById("sliding-content-events-click").classList.remove("animated");
+  document.getElementById("sliding-content-events-click").classList.remove("zoomIn");
+  document.getElementById("sliding-content-events-click").classList.add("invisible");
   if(transition == 0){
     theBody.classList.remove("pageBody");
     theBody.classList.add("eventBody");
@@ -175,12 +236,12 @@ function pageTransition(){
   var inAnimation;
   if(currentPage < pageHit)
   {
-    outAnimation = 'fadeOutLeft';
-    inAnimation = 'fadeInRight';
+    outAnimation = 'slideOutLeft';
+    inAnimation = 'slideInRight';
   }
   else if (currentPage > pageHit) {
-    outAnimation = 'fadeOutRight';
-    inAnimation = 'fadeInLeft';
+    outAnimation = 'slideOutRight';
+    inAnimation = 'slideInLeft';
   }
   if(currentPage != pageHit)
   {
@@ -353,10 +414,106 @@ function burst15()
     bubble.classList.remove("invisible");
   }, 500);
 }
-// var animation = bodymovin.loadAnimation({
-//   container: document.getElementById('loader'),
-//   rederer: 'svg',
-//   loop: true,
-//   autoplay: true,
-//   path: 'loader.json'
-// });
+
+//Event Page On click Starts
+var subcontent = document.getElementById("subcontent");
+var subcontent1 = document.getElementById("subcontent1");
+var subcontent2 = document.getElementById("subcontent2");
+var subcontent3 = document.getElementById("subcontent3");
+var textbox = document.getElementById("textbox");
+var body= document.getElementById('blurs');
+
+console.log(body);
+subcontent.addEventListener("click", function(){
+console.log("hello");
+textbox.classList.remove("invisible");
+    body.classList.remove("invisible");
+
+});
+
+
+console.log(subcontent);
+subcontent1.addEventListener("click", function(){
+console.log("hello");
+    textbox.classList.remove("invisible");
+    body.classList.remove("invisible");
+});
+
+
+console.log(subcontent);
+subcontent2.addEventListener("click", function(){
+console.log("hello");
+    textbox.classList.remove("invisible");
+    body.classList.remove("invisible");
+});
+
+
+console.log(subcontent);
+subcontent3.addEventListener("click", function(){
+console.log("hello");
+    textbox.classList.remove("invisible");
+    body.classList.remove("invisible");
+});
+
+body.addEventListener("click", function(){
+console.log("hello body");
+textbox.classList.add("invisible");
+    body.classList.add("invisible");
+
+});
+
+//Event Page On Click Ends
+
+//Event Page Click Functions starts
+function danceEvent()
+{
+  var img = document.getElementById("danceImage").getAttribute("src");
+  console.log(img);
+  eventTransition(img, "danceImage");
+}
+
+function theatreEvent()
+{
+  var img = document.getElementById("theatreImage").getAttribute("src");
+  console.log(img);
+  eventTransition(img, "danceImage");
+}
+
+function musicEvent()
+{
+  var img = document.getElementById("musicImage").getAttribute("src");
+  console.log(img);
+  eventTransition(img, "danceImage");
+}
+
+function artEvent()
+{
+  var img = document.getElementById("artImage").getAttribute("src");
+  console.log(img);
+  eventTransition(img, "danceImage");
+}
+
+function literatureEvent()
+{
+  var img = document.getElementById("literatureImage").getAttribute("src");
+  console.log(img);
+  eventTransition(img, "danceImage");
+}
+
+function eventTransition(imgSrc, reqId)
+{
+  var out = document.getElementById("sliding-content-events-no-click");
+  var inc = document.getElementById("sliding-content-events-click");
+  document.getElementById("eventImg").src = imgSrc;
+
+  out.classList.add("animated");
+  out.classList.add("zoomOut");
+  out.classList.add("faster");
+  out.addEventListener('animationend', function(){
+    out.classList.add("invisible");
+    inc.classList.remove("invisible");
+    inc.classList.add('animated');
+    inc.classList.add('zoomIn');
+    inc.classList.add('faster');
+  });
+}
