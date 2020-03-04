@@ -96,7 +96,6 @@ function afterLoad()
 {
   const a = document.getElementById('loader');
   const c = document.getElementById('sliding-content-home');
-  const b = document.getElementById('LandingVideo');
   const d = document.getElementById('main-content');
   console.log(a, c);
   a.classList.add("animated");
@@ -113,18 +112,15 @@ function afterLoad()
     c.addEventListener('animationend', function()	{
       c.classList.remove("fadeIn");
       // c.classList.remove("slower");
-      b.autoplay = true;
-      b.muted = true;
-      b.load();
     });
-    (function () {
-      document.getElementById("LandingVideo").addEventListener('ended',function() {
-          console.log('End');
-          var e = document.getElementById('LoopVideo');
-          b.classList.add('invisible');
-          e.classList.remove('invisible');
-      });
-    }());
+    // (function () {
+    //   document.getElementById("LandingVideo").addEventListener('ended',function() {
+    //       console.log('End');
+    //       var e = document.getElementById('LoopVideo');
+    //       b.classList.add('invisible');
+    //       e.classList.remove('invisible');
+    //   });
+    // }());
   });
 }
 
@@ -539,12 +535,12 @@ function eventTransition(imgSrc, reqId)
 
   out.classList.add("animated");
   out.classList.add("zoomOut");
-  out.classList.add("faster");
+  // out.classList.add("faster");
   out.addEventListener('animationend', function(){
     out.classList.add("invisible");
     inc.classList.remove("invisible");
     inc.classList.add('animated');
-    inc.classList.add('zoomIn');
-    inc.classList.add('faster');
+    inc.classList.add('fadeIn');
+    // inc.classList.add('faster');
   });
 }
