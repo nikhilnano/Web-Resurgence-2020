@@ -529,15 +529,15 @@ function danceEvent()
   subcontent6.classList.remove("invisible");
 
   eventBubble1.innerHTML = "Bollymania";
-  eventBubble2.innerHTML = "<br/> Duet";
+  eventBubble2.innerHTML = "Duet";//br front
   eventBubble3.innerHTML = "Semi<br/>Classical<br/>Solo";
-  eventBubble5.innerHTML = "<br/>Street<br/>Dance";
+  eventBubble5.innerHTML = "Street<br/>Dance";//br front
   eventBubble6.innerHTML = "Folk<br/>Dance";
 
-  eventBubble2.style.textAlign = "right";
-  eventBubble3.style.textAlign = "right";
-  eventBubble5.style.textAlign = "left";
-  eventBubble6.style.textAlign = "left";
+  // eventBubble2.style.textAlign = "right";
+  // eventBubble3.style.textAlign = "right";
+  // eventBubble5.style.textAlign = "left";
+  // eventBubble6.style.textAlign = "left";
 
   var img = document.getElementById("danceImage").getAttribute("src");
   console.log(img);
@@ -555,14 +555,14 @@ function theatreEvent()
 
   eventBubble1.innerHTML = "Street Play";
   eventBubble2.innerHTML = "Stand <br/> Up <br/> Comedy";
-  eventBubble3.innerHTML = "<br/><br/>Mime";
+  eventBubble3.innerHTML = "<br/>Mime";//br front
   eventBubble5.innerHTML = "One<br/>Act<br/>Play";
   eventBubble6.innerHTML = "Mea <br/> Culpa";
 
-  eventBubble2.style.textAlign = "right";
-  eventBubble3.style.textAlign = "right";
-  eventBubble5.style.textAlign = "left";
-  eventBubble6.style.textAlign = "left";
+  // eventBubble2.style.textAlign = "right";
+  // eventBubble3.style.textAlign = "right";
+  // eventBubble5.style.textAlign = "left";
+  // eventBubble6.style.textAlign = "left";
 
   var img = document.getElementById("theatreImage").getAttribute("src");
   console.log(img);
@@ -580,13 +580,13 @@ function musicEvent()
 
   eventBubble2.innerHTML = "Sangam";
   eventBubble3.innerHTML = "Light <br/> Indian <br/> Vocal";
-  eventBubble5.innerHTML = "<br/>Western <br/> Vocal";
+  eventBubble5.innerHTML = "Western <br/> Vocal";//br front
   eventBubble6.innerHTML = "Folk <br/> Songs";
 
-  eventBubble2.style.textAlign = "right";
-  eventBubble3.style.textAlign = "right";
-  eventBubble5.style.textAlign = "left";
-  eventBubble6.style.textAlign = "left";
+  // eventBubble2.style.textAlign = "right";
+  // eventBubble3.style.textAlign = "right";
+  // eventBubble5.style.textAlign = "left";
+  // eventBubble6.style.textAlign = "left";
 
   eventBubble2.style
   var img = document.getElementById("musicImage").getAttribute("src");
@@ -607,10 +607,10 @@ function photoEvent()
   eventBubble3.innerHTML = "Short<br/>Film<br/>Making";
   eventBubble5.innerHTML = "Advertisement<br/>Photo<br/>Presentation";
 
-  eventBubble2.style.textAlign = "right";
-  eventBubble3.style.textAlign = "right";
-  eventBubble5.style.textAlign = "left";
-  eventBubble6.style.textAlign = "left";
+  // eventBubble2.style.textAlign = "right";
+  // eventBubble3.style.textAlign = "right";
+  // eventBubble5.style.textAlign = "left";
+  // eventBubble6.style.textAlign = "left";
 
   var img = document.getElementById("photoImage").getAttribute("src");
   console.log(img);
@@ -627,14 +627,14 @@ function artEvent()
   subcontent6.classList.remove("invisible");
 
   eventBubble2.innerHTML = "Artifact <br/> Painting";
-  eventBubble3.innerHTML = "<br/><br/>Stippling";
-  eventBubble5.innerHTML = "<br/><br/>Graffiti";
+  eventBubble3.innerHTML = "<br/>Stippling";//br font
+  eventBubble5.innerHTML = "<br/>Graffiti";//br front
   eventBubble6.innerHTML = "Theme <br/> Based </br> Painting";
 
-  eventBubble2.style.textAlign = "right";
-  eventBubble3.style.textAlign = "right";
-  eventBubble5.style.textAlign = "left";
-  eventBubble6.style.textAlign = "left";
+  // eventBubble2.style.textAlign = "right";
+  // eventBubble3.style.textAlign = "right";
+  // eventBubble5.style.textAlign = "left";
+  // eventBubble6.style.textAlign = "left";
 
   var img = document.getElementById("artImage").getAttribute("src");
   console.log(img);
@@ -652,14 +652,14 @@ function literatureEvent()
 
   eventBubble1.innerHTML = "Creative Writing";
   eventBubble2.innerHTML = "Debate <br/> (Hindi)";
-  eventBubble3.innerHTML = "<br/>Debate <br/> (English)";
-  eventBubble4.innerHTML = "<br/><br/>Poetry (Hindi)";
-  eventBubble5.innerHTML = "<br/>Poetry <br/> (English)";
+  eventBubble3.innerHTML = "Debate <br/> (English)";//br
+  eventBubble4.innerHTML = "<br/>Poetry (Hindi)";//br
+  eventBubble5.innerHTML = "Poetry <br/> (English)";//br
   eventBubble6.innerHTML = "Turn Coat";
-  eventBubble2.style.textAlign = "right";
-  eventBubble3.style.textAlign = "right";
-  eventBubble5.style.textAlign = "left";
-  eventBubble6.style.textAlign = "left";
+  // eventBubble2.style.textAlign = "right";
+  // eventBubble3.style.textAlign = "right";
+  // eventBubble5.style.textAlign = "left";
+  // eventBubble6.style.textAlign = "left";
   var img = document.getElementById("literatureImage").getAttribute("src");
   console.log(img);
   eventTransition(img, "danceImage");
@@ -675,13 +675,13 @@ function specialEvent()
   subcontent6.classList.add("invisible");
 
   eventBubble1.innerHTML = "Fashion Show";
-  eventBubble3.innerHTML = "<br/>MOOT <br/> Court";
-  eventBubble5.innerHTML = "<br/>Youth<br/>Parliament";
+  eventBubble3.innerHTML = "MOOT <br/> Court";//br
+  eventBubble5.innerHTML = "Youth<br/>Parliament";//br
 
-  eventBubble2.style.textAlign = "right";
-  eventBubble3.style.textAlign = "right";
-  eventBubble5.style.textAlign = "left";
-  eventBubble6.style.textAlign = "left";
+  // eventBubble2.style.textAlign = "right";
+  // eventBubble3.style.textAlign = "right";
+  // eventBubble5.style.textAlign = "left";
+  // eventBubble6.style.textAlign = "left";
 
   var img = document.getElementById("specialImage").getAttribute("src");
   console.log(img);
@@ -696,12 +696,12 @@ function eventTransition(imgSrc, reqId)
 
   out.classList.add("animated");
   out.classList.add("zoomOut");
-  // out.classList.add("faster");
+  out.classList.add("faster");
   out.addEventListener('animationend', function(){
     out.classList.add("invisible");
     inc.classList.remove("invisible");
     inc.classList.add('animated');
     inc.classList.add('fadeIn');
-    // inc.classList.add('faster');
+    inc.classList.add('faster');
   });
 }

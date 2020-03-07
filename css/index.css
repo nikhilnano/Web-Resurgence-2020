@@ -411,13 +411,13 @@
 
 .text-box{
 
-	background-color: red;
+	background-color: #D3D3D3;
 	position: fixed;
 	border-radius: 20px;
-	height: 400px;
-	width: 800px;
-	top: 200px;
-	left: 300px;
+	height: 60vh;
+	width: 60vw;
+	top: 20vh;
+	left: 20vw;
 	padding: 100px;
 	z-index: 103;
 }
@@ -447,6 +447,7 @@
 
 .eventBubble
 {
+	font-size: 1.25rem;
 	font-family: "Amatic SC";
 	padding: 10px;
 	color: #8c00ff!important;
