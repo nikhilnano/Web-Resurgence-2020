@@ -530,9 +530,9 @@ function danceEvent()
 
   eventBubble1.innerHTML = "Bollymania";
   eventBubble2.innerHTML = "<br/> Duet";
-  eventBubble3.innerHTML = "Semi<br/>Classical<br/>Solo";
-  eventBubble5.innerHTML = "Street<br/>Dance";
-  eventBubble6.innerHTML = "Folk<br/>Dance";
+  eventBubble3.innerHTML = "<br/>Semi<br/>Classical<br/>Solo";
+  eventBubble5.innerHTML = "<br/>Street<br/>Dance";
+  eventBubble6.innerHTML = "<br/>Folk<br/>Dance";
 
   eventBubble2.style.textAlign = "right";
   eventBubble3.style.textAlign = "right";
@@ -555,8 +555,8 @@ function theatreEvent()
 
   eventBubble1.innerHTML = "Street Play";
   eventBubble2.innerHTML = "Stand <br/> Up <br/> Comedy";
-  eventBubble3.innerHTML = "<br/>Mime";
-  eventBubble5.innerHTML = "One<br/>Act<br/>Play";
+  eventBubble3.innerHTML = "<br/><br/>Mime";
+  eventBubble5.innerHTML = "<br/>One<br/>Act<br/>Play";
   eventBubble6.innerHTML = "Mea <br/> Culpa";
 
   eventBubble2.style.textAlign = "right";
@@ -579,8 +579,8 @@ function musicEvent()
   subcontent6.classList.remove("invisible");
 
   eventBubble2.innerHTML = "Sangam";
-  eventBubble3.innerHTML = "Light <br/> Indian <br/> Vocal";
-  eventBubble5.innerHTML = "Western <br/> Vocal";
+  eventBubble3.innerHTML = "<br/>Light <br/> Indian <br/> Vocal";
+  eventBubble5.innerHTML = "<br/>Western <br/> Vocal";
   eventBubble6.innerHTML = "Folk <br/> Songs";
 
   eventBubble2.style.textAlign = "right";
@@ -627,8 +627,8 @@ function artEvent()
   subcontent6.classList.remove("invisible");
 
   eventBubble2.innerHTML = "Artifact <br/> Painting";
-  eventBubble3.innerHTML = "<br/>Stippling";
-  eventBubble5.innerHTML = "<br/>Graffiti";
+  eventBubble3.innerHTML = "<br/><br/>Stippling";
+  eventBubble5.innerHTML = "<br/><br/>Graffiti";
   eventBubble6.innerHTML = "Theme <br/> Based </br> Painting";
 
   eventBubble2.style.textAlign = "right";
@@ -652,9 +652,9 @@ function literatureEvent()
 
   eventBubble1.innerHTML = "Creative Writing";
   eventBubble2.innerHTML = "Debate <br/> (Hindi)";
-  eventBubble3.innerHTML = "Debate <br/> (English)";
-  eventBubble4.innerHTML = "<br/><br/>Poetry (Hindi)";
-  eventBubble5.innerHTML = "Poetry <br/> (English)";
+  eventBubble3.innerHTML = "<br/>Debate <br/> (English)";
+  eventBubble4.innerHTML = "<br/><br/><br/>Poetry (Hindi)";
+  eventBubble5.innerHTML = "<br/>Poetry <br/> (English)";
   eventBubble6.innerHTML = "Turn Coat";
   eventBubble2.style.textAlign = "right";
   eventBubble3.style.textAlign = "right";
@@ -675,8 +675,8 @@ function specialEvent()
   subcontent6.classList.add("invisible");
 
   eventBubble1.innerHTML = "Fashion Show";
-  eventBubble3.innerHTML = "MOOT <br/> Court";
-  eventBubble5.innerHTML = "Youth<br/>Parliament";
+  eventBubble3.innerHTML = "<br/>MOOT <br/> Court";
+  eventBubble5.innerHTML = "<br/>Youth<br/>Parliament";
 
   eventBubble2.style.textAlign = "right";
   eventBubble3.style.textAlign = "right";
