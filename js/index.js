@@ -135,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 function home()
 {
   if(transition == 0){
+    document.getElementById("topLogo").classList.add("invisible");
     theBody.classList.remove("eventBody");
     theBody.classList.add("pageBody");
     theBody.classList.remove("cardBody");
@@ -145,6 +146,7 @@ function home()
 
 function events()
 {
+  document.getElementById("topLogo").classList.remove("invisible");
   document.getElementById("sliding-content-events-no-click").classList.remove("animated");
   document.getElementById("sliding-content-events-no-click").classList.remove("zoomOut");
   document.getElementById("sliding-content-events-no-click").classList.remove("invisible");
@@ -164,6 +166,7 @@ function events()
 
 function team()
 {
+  document.getElementById("topLogo").classList.remove("invisible");
   theBody.classList.remove("eventBody");
   theBody.classList.add("pageBody");
   theBody.classList.remove("cardBody");
@@ -175,6 +178,7 @@ function team()
 
 function about()
 {
+  document.getElementById("topLogo").classList.remove("invisible");
   theBody.classList.remove("eventBody");
   theBody.classList.remove("pageBody");
   theBody.classList.add("cardBody");
@@ -186,6 +190,7 @@ function about()
 
 function contact()
 {
+  document.getElementById("topLogo").classList.remove("invisible");
   theBody.classList.remove("eventBody");
   theBody.classList.add("pageBody");
   theBody.classList.remove("cardBody");
@@ -443,15 +448,17 @@ function burst15()
 }
 
 //Event Page On click Starts
-var subcontent = document.getElementById("subcontent");
 var subcontent1 = document.getElementById("subcontent1");
 var subcontent2 = document.getElementById("subcontent2");
 var subcontent3 = document.getElementById("subcontent3");
+var subcontent4 = document.getElementById("subcontent4");
+var subcontent5 = document.getElementById("subcontent5");
+var subcontent6 = document.getElementById("subcontent6");
 var textbox = document.getElementById("textbox");
 var body= document.getElementById('blurs');
 
 console.log(body);
-subcontent.addEventListener("click", function(){
+subcontent1.addEventListener("click", function(){
 console.log("hello");
 textbox.classList.remove("invisible");
     body.classList.remove("invisible");
@@ -459,15 +466,7 @@ textbox.classList.remove("invisible");
 });
 
 
-console.log(subcontent);
-subcontent1.addEventListener("click", function(){
-console.log("hello");
-    textbox.classList.remove("invisible");
-    body.classList.remove("invisible");
-});
-
-
-console.log(subcontent);
+console.log(subcontent1);
 subcontent2.addEventListener("click", function(){
 console.log("hello");
     textbox.classList.remove("invisible");
@@ -475,8 +474,28 @@ console.log("hello");
 });
 
 
-console.log(subcontent);
+console.log(subcontent1);
 subcontent3.addEventListener("click", function(){
+console.log("hello");
+    textbox.classList.remove("invisible");
+    body.classList.remove("invisible");
+});
+
+
+console.log(subcontent1);
+subcontent4.addEventListener("click", function(){
+console.log("hello");
+    textbox.classList.remove("invisible");
+    body.classList.remove("invisible");
+});
+
+subcontent5.addEventListener("click", function(){
+console.log("hello");
+    textbox.classList.remove("invisible");
+    body.classList.remove("invisible");
+});
+
+subcontent6.addEventListener("click", function(){
 console.log("hello");
     textbox.classList.remove("invisible");
     body.classList.remove("invisible");
@@ -492,8 +511,34 @@ textbox.classList.add("invisible");
 //Event Page On Click Ends
 
 //Event Page Click Functions starts
+
+var eventBubble1 = document.getElementById("subcontent1-p");
+var eventBubble2 = document.getElementById("subcontent2-p");
+var eventBubble3 = document.getElementById("subcontent3-p");
+var eventBubble4 = document.getElementById("subcontent4-p");
+var eventBubble5 = document.getElementById("subcontent5-p");
+var eventBubble6 = document.getElementById("subcontent6-p");
+
 function danceEvent()
 {
+  subcontent1.classList.remove("invisible");
+  subcontent2.classList.remove("invisible");
+  subcontent3.classList.remove("invisible");
+  subcontent4.classList.add("invisible");
+  subcontent5.classList.remove("invisible");
+  subcontent6.classList.remove("invisible");
+
+  eventBubble1.innerHTML = "Bollymania";
+  eventBubble2.innerHTML = "<br/> Duet";
+  eventBubble3.innerHTML = "Semi<br/>Classical<br/>Solo";
+  eventBubble5.innerHTML = "Street<br/>Dance";
+  eventBubble6.innerHTML = "Folk<br/>Dance";
+
+  eventBubble2.style.textAlign = "right";
+  eventBubble3.style.textAlign = "right";
+  eventBubble5.style.textAlign = "left";
+  eventBubble6.style.textAlign = "left";
+
   var img = document.getElementById("danceImage").getAttribute("src");
   console.log(img);
   eventTransition(img, "danceImage");
@@ -501,6 +546,24 @@ function danceEvent()
 
 function theatreEvent()
 {
+  subcontent1.classList.remove("invisible");
+  subcontent2.classList.remove("invisible");
+  subcontent3.classList.remove("invisible");
+  subcontent4.classList.add("invisible");
+  subcontent5.classList.remove("invisible");
+  subcontent6.classList.remove("invisible");
+
+  eventBubble1.innerHTML = "Street Play";
+  eventBubble2.innerHTML = "Stand <br/> Up <br/> Comedy";
+  eventBubble3.innerHTML = "<br/>Mime";
+  eventBubble5.innerHTML = "One<br/>Act<br/>Play";
+  eventBubble6.innerHTML = "Mea <br/> Culpa";
+
+  eventBubble2.style.textAlign = "right";
+  eventBubble3.style.textAlign = "right";
+  eventBubble5.style.textAlign = "left";
+  eventBubble6.style.textAlign = "left";
+
   var img = document.getElementById("theatreImage").getAttribute("src");
   console.log(img);
   eventTransition(img, "danceImage");
@@ -508,13 +571,71 @@ function theatreEvent()
 
 function musicEvent()
 {
+  subcontent1.classList.add("invisible");
+  subcontent2.classList.remove("invisible");
+  subcontent3.classList.remove("invisible");
+  subcontent4.classList.add("invisible");
+  subcontent5.classList.remove("invisible");
+  subcontent6.classList.remove("invisible");
+
+  eventBubble2.innerHTML = "Sangam";
+  eventBubble3.innerHTML = "Light <br/> Indian <br/> Vocal";
+  eventBubble5.innerHTML = "Western <br/> Vocal";
+  eventBubble6.innerHTML = "Folk <br/> Songs";
+
+  eventBubble2.style.textAlign = "right";
+  eventBubble3.style.textAlign = "right";
+  eventBubble5.style.textAlign = "left";
+  eventBubble6.style.textAlign = "left";
+
+  eventBubble2.style
   var img = document.getElementById("musicImage").getAttribute("src");
   console.log(img);
   eventTransition(img, "danceImage");
 }
 
+function photoEvent()
+{
+  subcontent1.classList.remove("invisible");
+  subcontent2.classList.add("invisible");
+  subcontent3.classList.remove("invisible");
+  subcontent4.classList.add("invisible");
+  subcontent5.classList.remove("invisible");
+  subcontent6.classList.add("invisible");
+
+  eventBubble1.innerHTML = "Resurgence Cover Shot";
+  eventBubble3.innerHTML = "Short<br/>Film<br/>Making";
+  eventBubble5.innerHTML = "Advertisement<br/>Photo<br/>Presentation";
+
+  eventBubble2.style.textAlign = "right";
+  eventBubble3.style.textAlign = "right";
+  eventBubble5.style.textAlign = "left";
+  eventBubble6.style.textAlign = "left";
+
+  var img = document.getElementById("photoImage").getAttribute("src");
+  console.log(img);
+  eventTransition(img, "photoImage");
+}
+
 function artEvent()
 {
+  subcontent1.classList.add("invisible");
+  subcontent2.classList.remove("invisible");
+  subcontent3.classList.remove("invisible");
+  subcontent4.classList.add("invisible");
+  subcontent5.classList.remove("invisible");
+  subcontent6.classList.remove("invisible");
+
+  eventBubble2.innerHTML = "Artifact <br/> Painting";
+  eventBubble3.innerHTML = "<br/>Stippling";
+  eventBubble5.innerHTML = "<br/>Graffiti";
+  eventBubble6.innerHTML = "Theme <br/> Based </br> Painting";
+
+  eventBubble2.style.textAlign = "right";
+  eventBubble3.style.textAlign = "right";
+  eventBubble5.style.textAlign = "left";
+  eventBubble6.style.textAlign = "left";
+
   var img = document.getElementById("artImage").getAttribute("src");
   console.log(img);
   eventTransition(img, "danceImage");
@@ -522,9 +643,49 @@ function artEvent()
 
 function literatureEvent()
 {
+  subcontent1.classList.remove("invisible");
+  subcontent2.classList.remove("invisible");
+  subcontent3.classList.remove("invisible");
+  subcontent4.classList.remove("invisible");
+  subcontent5.classList.remove("invisible");
+  subcontent6.classList.remove("invisible");
+
+  eventBubble1.innerHTML = "Creative Writing";
+  eventBubble2.innerHTML = "Debate <br/> (Hindi)";
+  eventBubble3.innerHTML = "Debate <br/> (English)";
+  eventBubble4.innerHTML = "<br/><br/>Poetry (Hindi)";
+  eventBubble5.innerHTML = "Poetry <br/> (English)";
+  eventBubble6.innerHTML = "Turn Coat";
+  eventBubble2.style.textAlign = "right";
+  eventBubble3.style.textAlign = "right";
+  eventBubble5.style.textAlign = "left";
+  eventBubble6.style.textAlign = "left";
   var img = document.getElementById("literatureImage").getAttribute("src");
   console.log(img);
   eventTransition(img, "danceImage");
+}
+
+function specialEvent()
+{
+  subcontent1.classList.remove("invisible");
+  subcontent2.classList.add("invisible");
+  subcontent3.classList.remove("invisible");
+  subcontent4.classList.add("invisible");
+  subcontent5.classList.remove("invisible");
+  subcontent6.classList.add("invisible");
+
+  eventBubble1.innerHTML = "Fashion Show";
+  eventBubble3.innerHTML = "MOOT <br/> Court";
+  eventBubble5.innerHTML = "Youth<br/>Parliament";
+
+  eventBubble2.style.textAlign = "right";
+  eventBubble3.style.textAlign = "right";
+  eventBubble5.style.textAlign = "left";
+  eventBubble6.style.textAlign = "left";
+
+  var img = document.getElementById("specialImage").getAttribute("src");
+  console.log(img);
+  eventTransition(img, "specialImage");
 }
 
 function eventTransition(imgSrc, reqId)

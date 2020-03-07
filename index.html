@@ -19,7 +19,7 @@
 		<video autoplay muted src="video/Loader.mp4" type"video/mp4" class="video" id="loadingVideo"></video>
 	</div>
 	<div class="invisible" id="main-content">
-		<div class="logo" onclick="home()"> <img src="images/logo.png" class="navlogo"> </div>
+		<div id="topLogo" class="logo invisible" onclick="home()"> <img src="images/logo.png" class="navlogo"> </div>
 		<nav class="navbae" id="navbar">
 			<ul class="navmenu">
 				<li class="navitems" onclick="home()" id="homeNav">Home</li>
@@ -53,6 +53,7 @@
     	</filter>
   	</defs>
 		</svg>
+			<!-- <span class='particle'></span>
 			<span class='particle'></span>
 			<span class='particle'></span>
 			<span class='particle'></span>
@@ -251,10 +252,9 @@
 			<span class='particle'></span>
 			<span class='particle'></span>
 			<span class='particle'></span>
-			<span class='particle'></span>
-			<span class='particle'></span>
-			<div class id="background-wrap">
-    		<div class="bubble" id="x1" onclick = "burst1()"></div>
+			<span class='particle'></span> -->
+			<div class id="background-wrap" onclick="events()">
+    		<!-- <div class="bubble" id="x1" onclick = "burst1()"></div>
     		<div class="bubble" id="x2" onclick = "burst2()"></div>
     		<div class="bubble " id="x3" onclick = "burst3()"></div>
     		<div class="bubble " id="x4" onclick = "burst4()"></div>
@@ -268,11 +268,11 @@
 				<div class="bubble " id="x12" onclick = "burst12()"></div>
 				<div class="bubble " id="x13" onclick = "burst13()"></div>
 				<div class="bubble " id="x14" onclick = "burst14()"></div>
-				<div class="bubble " id="x15" onclick = "burst15()"></div>
+				<div class="bubble " id="x15" onclick = "burst15()"></div> -->
 			</div>
 			<div class="windowspan" id="sliding-content-events-no-click">
 				<div class="Dance" onclick="danceEvent()">
-					<img src="images/testImage.png" class="EventImages eventPage" id="danceImage"/>
+					<img src="images/danceImage.gif" class="EventImages eventPage" id="danceImage"/>
 					<p class="EventCaption eventPage">Dance</p>
 				</div>
 				<div class="Theatre" onclick="theatreEvent()">
@@ -283,6 +283,10 @@
 					<img src="images/testImage3.png" class="EventImages eventPage" id="musicImage"/>
 					<p class="EventCaption eventPage">Music</p>
 				</div>
+				<div class="Photo" onclick="photoEvent()">
+					<img src="images/testImage.png" class="EventImages eventPage" id="photoImage"/>
+					<p class="EventCaption eventPage">Photo/Video graphy</p>
+				</div>
 				<div class="Art" onclick="artEvent()">
 					<img src="images/testImage.png" class="EventImages eventPage" id="artImage"/>
 					<p class="EventCaption eventPage">Fine Arts</p>
@@ -291,23 +295,45 @@
 					<img src="images/testImage.png" class="EventImages eventPage" id="literatureImage"/>
 					<p class="EventCaption eventPage">Literature</p>
 				</div>
+				<div class="Specials" onclick="specialEvent()">
+					<img src="images/testImage3.png" class="EventImages eventPage" id="specialImage"/>
+					<p class="EventCaption eventPage">Specials</p>
+				</div>
 		</div>
-		<div class="windowspan invisible" id="sliding-content-events-click">
-			<img src="images/testImage.png" class="eventClickImg" id="eventImg"/>
-			<div class="sub-content" id="subcontent">
+		<div class="eventwindow invisible" id="sliding-content-events-click" >
+
+			<img src="images/testImage.png" class="eventClickImg" id="eventImg" onclick="events()"/>
+			<div class="sub-content-1 subcontents" id="subcontent1">
+				<p id="subcontent1-p" class="eventBubble">
+				</p>
 			</div>
-			<div class="sub-content-1" id="subcontent1">
+			<div class="sub-content-2 subcontents" id="subcontent2">
+				<p id="subcontent2-p" class="eventBubble">
+				</p>
 			</div>
-			<div class="sub-content-2" id="subcontent2">
+			<div class="sub-content-3 subcontents" id="subcontent3">
+				<p id="subcontent3-p" class="eventBubble">
+				</p>
 			</div>
-			<div class="sub-content-3" id="subcontent3">
+			<div class="sub-content-4 subcontents" id="subcontent4">
+				<p id="subcontent4-p" class="eventBubble">
+				</p>
 			</div>
+			<div class="sub-content-5 subcontents" id="subcontent5">
+				<p id="subcontent5-p" class="eventBubble">
+				</p>
+			</div>
+			<div class="sub-content-6 subcontents" id="subcontent6">
+				<p id="subcontent6-p" class="eventBubble">
+				</p>
+			</div>
+
     	<div class="blur invisible" id="blurs">
     	</div>
 
     	<div class="text-box invisible" id="textbox">
 			</div>
-		</div>
+			</div>
 	</div>
 		<div class="windowspan invisible" id="sliding-content-team">
 			<p class="ResugName GlowOnHover">Coming Soon...</p>

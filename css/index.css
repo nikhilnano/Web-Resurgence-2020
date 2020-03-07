@@ -26,6 +26,10 @@
 	height: 96.8vh;
 }
 
+#sliding-content-events-click {
+	z-index: 1;
+}
+
 /* Id Ends */
 
 /* Class Starts */
@@ -66,7 +70,7 @@
 }
 
 .navbae{
-	z-index: 100;
+	z-index: 999;
 }
 
 .navlogo{
@@ -144,6 +148,10 @@
 	width: 100vw;
 }
 
+.eventwindow{
+	width: 100vw;
+	z-index: 2;
+}
 .video1, .video2
 {
 	position: fixed;
@@ -169,42 +177,56 @@
 .Dance
 {
 	position: fixed;
-	left: 15vw;
+	left: 10vw;
 	top: 23vh;
 }
 
 .Theatre
 {
 	position: fixed;
-	left: 42vw;
+	left: 33vw;
 	top: 23vh;
 }
 
 .Music
 {
 	position: fixed;
-	left: 69vw;
+	left: 56vw;
+	top: 23vh;
+}
+
+.Photo
+{
+	position: fixed;
+	left: 79vw;
 	top: 23vh;
 }
 
 .Art
 {
 	position: fixed;
-	left: 28.5vw;
+	left: 22vw;
 	top: 50vh;
 }
 
 .Literature
 {
 	position: fixed;
-	left: 55.5vw;
+	left: 45vw;
+	top: 50vh;
+}
+
+.Specials
+{
+	position: fixed;
+	left: 68vw;
 	top: 50vh;
 }
 
 .EventImages
 {
-	height: 120px;
-	width: 120px;
+	height: 16vh;
+	width: 8vw;
 	border-radius: 50%;
 }
 .EventImages:hover
@@ -231,6 +253,11 @@
 	cursor: pointer;
 }
 
+.go_back{
+	height: auto;
+	width: auto;
+	z-index: 1000;
+}
 .eventClickImg{
 	height: 40vh;
 	width: 20vw;
@@ -242,21 +269,25 @@
 	/* padding: 100px; */
 }
 
-.sub-content{
+.sub-content-1{
 	/* display: none; */
 	background-color: #f6f6f6;
 	position: fixed;
 	border-radius: 50%;
-	height: 16vh;
-	width: 8vw;
-	top: 22vh;
-	left: 46vw;
+	height: 14vh;
+	width: 7vw;
+	top: 21.5vh;
+	left: 46.5vw;
 	z-index: 100;
 	transition: top 0.5s, left 0.5s,transform 0.5s;
+/*
+	font-family: "Amatic SC";
+	font-size: 1rem;
+	color: #8c00ff!important; */
 }
 
 
-.sub-content-1{
+.sub-content-5{
 	/* display: none; */
 
 	background-color: #f6f6f6;
@@ -264,7 +295,7 @@
 	border-radius: 50%;
 	height: 14vh;
 	width: 7vw;
-	top: 50.5vh;
+	top: 53.5vh;
 	left: 37.5vw;
 	z-index: 100;
 
@@ -273,7 +304,7 @@
 }
 
 
-.sub-content-2{
+.sub-content-4{
 	/* display: none; */
 
 	background-color: #f6f6f6;
@@ -282,7 +313,7 @@
 	height: 14vh;
 	width: 7vw;
 	top: 63vh;
-	left: 46.25vw;
+	left: 46.5vw;
 	z-index: 100;
 	transition: top 0.5s, left 0.5s,transform 0.5s;
 }
@@ -296,38 +327,78 @@
 	border-radius: 50%;
 	height: 14vh;
 	width: 7vw;
-	top: 51.5vh;
+	top: 53.5vh;
 	left: 55.5vw;
 	z-index: 100;
 	transition: top 0.5s, left 0.5s,transform 0.5s;
 }
 
+.sub-content-2{
+	/* display: none; */
 
-
-
-.sub-content:hover{
-	top: 12vh;
-	left:46vw;
-	transform: scale(1.3);
+	background-color: #f6f6f6;
+	position: fixed;
+	border-radius: 50%;
+	height: 14vh;
+	width: 7vw;
+	top: 33.5vh;
+	left: 55.5vw;
+	z-index: 100;
+	transition: top 0.5s, left 0.5s,transform 0.5s;
 }
+
+.sub-content-6{
+	/* display: none; */
+
+	background-color: #f6f6f6;
+	position: fixed;
+	border-radius: 50%;
+	height: 14vh;
+	width: 7vw;
+	top: 33.5vh;
+	left: 37.5vw;
+	z-index: 100;
+
+	 transition: top 0.5s, left 0.5s,transform 0.5s;
+
+}
+
 
 
 .sub-content-1:hover{
-	top: 54.25vh;
-	left:33.75vw;
+	top: 14.25vh;
+	left:46.5vw;
 	transform: scale(1.3);
 }
-.sub-content-2:hover{
+
+
+.sub-content-5:hover{
+	top: 56.5vh;
+	left: 33.75vw;
+	transform: scale(1.3);
+}
+.sub-content-4:hover{
 	top: 72vh;
 	left:46.25vw;
 	transform: scale(1.3);
 }
 .sub-content-3:hover{
-	top: 54.25vh;
-	left:59.25vw;
+	top: 56.5vh;
+	left: 59.5vw;
 	transform: scale(1.3);
 }
 
+.sub-content-2:hover{
+	top: 30.5vh;
+	left: 59.5vw;
+	transform: scale(1.3);
+}
+
+.sub-content-6:hover{
+	top: 30.5vh;
+	left: 33.75vw;
+	transform: scale(1.3);
+}
 
 .blur{
 	position: fixed;
@@ -372,6 +443,16 @@
 	position: fixed;
 	top: 24vh;
 	left: 40vw;
+}
+
+.eventBubble
+{
+	font-family: "Amatic SC";
+	padding: 10px;
+	color: #8c00ff!important;
+	text-align: center;
+	font-weight: bold;
+	margin-top: 2vh;
 }
 
 /* Class Ends */
