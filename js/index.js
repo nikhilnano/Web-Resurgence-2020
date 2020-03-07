@@ -653,7 +653,7 @@ function literatureEvent()
   eventBubble1.innerHTML = "Creative Writing";
   eventBubble2.innerHTML = "Debate <br/> (Hindi)";
   eventBubble3.innerHTML = "Debate <br/> (English)";//br
-  eventBubble4.innerHTML = "Poetry (Hindi)";//br
+  eventBubble4.innerHTML = "<br/>Poetry (Hindi)";//br-2
   eventBubble5.innerHTML = "Poetry <br/> (English)";//br
   eventBubble6.innerHTML = "Turn Coat";
   // eventBubble2.style.textAlign = "right";

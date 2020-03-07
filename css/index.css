@@ -430,7 +430,7 @@
 	position: fixed;
 	width: 90vw;
 	font-family: 'Amatic SC';
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 	top: 24vh;
 	left: 5vw;
 }
@@ -447,7 +447,7 @@
 
 .eventBubble
 {
-	font-size: 1.25rem;
+	font-size: 1rem;
 	font-family: "Amatic SC";
 	padding: 10px;
 	color: #8c00ff!important;
