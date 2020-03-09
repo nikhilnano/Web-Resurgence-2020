@@ -7,36 +7,6 @@ var currentPage = 1;
 var transition = 0;
 var body = document.getElementById("theBody");
 
-// window.addEventListener('mousewheel', function(e){
-//     wDelta = e.wheelDelta < 0 ? 'down' : 'up';
-//     console.log(wDelta);
-//     if(wDelta == 'down')
-//     {
-//       if(currentPage==1)
-//         events();
-//       else if(currentPage==2)
-//         team();
-//       else if(currentPage==3)
-//         about();
-//       else if(currentPage==4)
-//         contact();
-//       else if(currentPage==5)
-//         home();
-//     }
-//     else {
-//           if(currentPage==1)
-//             contact();
-//           else if(currentPage==2)
-//             home();
-//           else if(currentPage==3)
-//             events();
-//           else if(currentPage==4)
-//             team();
-//           else if(currentPage==5)
-//             about();
-//     }
-// });
-
 function scrollTransition(event) {
   let direction = 0;
   event.preventDefault();
