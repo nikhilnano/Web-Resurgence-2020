@@ -1,7 +1,7 @@
 var pages = ['sliding-content-home', 'sliding-content-events',
     'sliding-content-team', 'sliding-content-about',
-    'sliding-content-contact'];
-var navItems = ['homeNav','eventsNav','teamNav','aboutNav','contactNav'];
+    'sliding-content-contact','sliding-content-sponsors'];
+var navItems = ['homeNav','eventsNav','teamNav','aboutNav','contactNav','sponsorNav'];
 var pageHit = 1;
 var currentPage = 1;
 var transition = 0;
@@ -9,7 +9,7 @@ var body = document.getElementById("theBody");
 
 function scrollTransition(event) {
   let direction = 0;
-  event.preventDefault();
+  // event.preventDefault();
   console.log(direction);
   direction += event.deltaY * -0.01;
 
@@ -26,12 +26,14 @@ function scrollTransition(event) {
       else if(currentPage==4)
         contact();
       else if(currentPage==5)
+        sponsor();
+      else if(currentPage==6)
         home();
     }
     else if (direction > 0) {
 
                 if(currentPage==1)
-                  contact();
+                  sponsor();
                 else if(currentPage==2)
                   home();
                 else if(currentPage==3)
@@ -40,6 +42,8 @@ function scrollTransition(event) {
                   team();
                 else if(currentPage==5)
                   about();
+                else if(currentPage==6)
+                  contact();
     }
 }
 window.onwheel = scrollTransition;
@@ -86,6 +90,12 @@ document.addEventListener("DOMContentLoaded", function(event){
 
 function home()
 {
+  document.getElementById("homeNav").classList.add("underlineText");
+  document.getElementById("eventsNav").classList.remove("underlineText");
+  document.getElementById("teamNav").classList.remove("underlineText");
+  document.getElementById("aboutNav").classList.remove("underlineText");
+  document.getElementById("contactNav").classList.remove("underlineText");
+  document.getElementById("sponsorNav").classList.remove("underlineText");
   if(transition == 0){
     document.getElementById("topLogo").classList.add("invisible");
     theBody.classList.remove("eventBody");
@@ -98,6 +108,14 @@ function home()
 
 function events()
 {
+  document.getElementById("homeNav").classList.remove("underlineText");
+  document.getElementById("eventsNav").classList.add("underlineText");
+  document.getElementById("teamNav").classList.remove("underlineText");
+  document.getElementById("aboutNav").classList.remove("underlineText");
+  document.getElementById("contactNav").classList.remove("underlineText");
+  document.getElementById("sponsorNav").classList.remove("underlineText");
+
+
   document.getElementById("topLogo").classList.remove("invisible");
   document.getElementById("sliding-content-events-no-click").classList.remove("animated");
   document.getElementById("sliding-content-events-no-click").classList.remove("zoomOut");
@@ -118,6 +136,13 @@ function events()
 
 function team()
 {
+  document.getElementById("homeNav").classList.remove("underlineText");
+  document.getElementById("eventsNav").classList.remove("underlineText");
+  document.getElementById("teamNav").classList.add("underlineText");
+  document.getElementById("aboutNav").classList.remove("underlineText");
+  document.getElementById("contactNav").classList.remove("underlineText");
+  document.getElementById("sponsorNav").classList.remove("underlineText");
+
   document.getElementById("topLogo").classList.remove("invisible");
   theBody.classList.remove("eventBody");
   theBody.classList.add("pageBody");
@@ -130,6 +155,13 @@ function team()
 
 function about()
 {
+  document.getElementById("homeNav").classList.remove("underlineText");
+  document.getElementById("eventsNav").classList.remove("underlineText");
+  document.getElementById("teamNav").classList.remove("underlineText");
+  document.getElementById("aboutNav").classList.add("underlineText");
+  document.getElementById("contactNav").classList.remove("underlineText");
+  document.getElementById("sponsorNav").classList.remove("underlineText");
+
   document.getElementById("topLogo").classList.remove("invisible");
   theBody.classList.remove("eventBody");
   theBody.classList.remove("pageBody");
@@ -142,12 +174,38 @@ function about()
 
 function contact()
 {
+  document.getElementById("homeNav").classList.remove("underlineText");
+  document.getElementById("eventsNav").classList.remove("underlineText");
+  document.getElementById("teamNav").classList.remove("underlineText");
+  document.getElementById("aboutNav").classList.remove("underlineText");
+  document.getElementById("contactNav").classList.add("underlineText");
+  document.getElementById("sponsorNav").classList.remove("underlineText");
+
   document.getElementById("topLogo").classList.remove("invisible");
   theBody.classList.remove("eventBody");
   theBody.classList.add("pageBody");
   theBody.classList.remove("cardBody");
   if(transition == 0){
     pageHit = 5;
+    pageTransition();
+  }
+}
+
+function sponsor()
+{
+  document.getElementById("homeNav").classList.remove("underlineText");
+  document.getElementById("eventsNav").classList.remove("underlineText");
+  document.getElementById("teamNav").classList.remove("underlineText");
+  document.getElementById("aboutNav").classList.remove("underlineText");
+  document.getElementById("contactNav").classList.remove("underlineText");
+  document.getElementById("sponsorNav").classList.add("underlineText");
+
+  document.getElementById("topLogo").classList.remove("invisible");
+  theBody.classList.remove("eventBody");
+  theBody.classList.add("pageBody");
+  theBody.classList.remove("cardBody");
+  if(transition == 0){
+    pageHit = 6;
     pageTransition();
   }
 }

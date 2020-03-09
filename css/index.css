@@ -162,6 +162,10 @@
   animation: glow 1s ease-in-out infinite alternate;
 }
 
+.underlineText {
+	text-decoration: underline;
+}
+
 .windowspan{
 	width: 100vw;
 }
