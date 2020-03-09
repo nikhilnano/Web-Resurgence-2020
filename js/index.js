@@ -7,6 +7,7 @@ var currentPage = 1;
 var transition = 0;
 var body = document.getElementById("theBody");
 
+
 // //cursor animation starts
 // Create empty
 // var bubbletrail= {};
@@ -454,63 +455,6 @@ var subcontent3 = document.getElementById("subcontent3");
 var subcontent4 = document.getElementById("subcontent4");
 var subcontent5 = document.getElementById("subcontent5");
 var subcontent6 = document.getElementById("subcontent6");
-var textbox = document.getElementById("textbox");
-var body= document.getElementById('blurs');
-
-console.log(body);
-subcontent1.addEventListener("click", function(){
-console.log("hello");
-textbox.classList.remove("invisible");
-    body.classList.remove("invisible");
-
-});
-
-
-console.log(subcontent1);
-subcontent2.addEventListener("click", function(){
-console.log("hello");
-    textbox.classList.remove("invisible");
-    body.classList.remove("invisible");
-});
-
-
-console.log(subcontent1);
-subcontent3.addEventListener("click", function(){
-console.log("hello");
-    textbox.classList.remove("invisible");
-    body.classList.remove("invisible");
-});
-
-
-console.log(subcontent1);
-subcontent4.addEventListener("click", function(){
-console.log("hello");
-    textbox.classList.remove("invisible");
-    body.classList.remove("invisible");
-});
-
-subcontent5.addEventListener("click", function(){
-console.log("hello");
-    textbox.classList.remove("invisible");
-    body.classList.remove("invisible");
-});
-
-subcontent6.addEventListener("click", function(){
-console.log("hello");
-    textbox.classList.remove("invisible");
-    body.classList.remove("invisible");
-});
-
-body.addEventListener("click", function(){
-console.log("hello body");
-textbox.classList.add("invisible");
-    body.classList.add("invisible");
-
-});
-
-//Event Page On Click Ends
-
-//Event Page Click Functions starts
 
 var eventBubble1 = document.getElementById("subcontent1-p");
 var eventBubble2 = document.getElementById("subcontent2-p");
@@ -518,6 +462,81 @@ var eventBubble3 = document.getElementById("subcontent3-p");
 var eventBubble4 = document.getElementById("subcontent4-p");
 var eventBubble5 = document.getElementById("subcontent5-p");
 var eventBubble6 = document.getElementById("subcontent6-p");
+
+var textbox = document.getElementById("textbox");
+var blurDiv= document.getElementById('blurs');
+var tempStr;
+
+console.log(body);
+subcontent1.addEventListener("click", function(){
+console.log("hello");
+textbox.classList.remove("invisible");
+    blurDiv.classList.remove("invisible");
+    tempStr = eventBubble1.innerHTML.replace(/<br>/g," ");
+    document.getElementById("eventHead").innerHTML = tempStr;
+});
+
+
+console.log(subcontent1);
+subcontent2.addEventListener("click", function(){
+console.log("hello");
+    textbox.classList.remove("invisible");
+    blurDiv.classList.remove("invisible");
+    console.log(document.getElementById("sliding-content-events"));
+    tempStr = eventBubble2.innerHTML.replace(/<br>/g," ");
+    document.getElementById("eventHead").innerHTML = tempStr;
+});
+
+
+console.log(subcontent1);
+subcontent3.addEventListener("click", function(){
+console.log("hello");
+    textbox.classList.remove("invisible");
+    blurDiv.classList.remove("invisible");
+    tempStr = eventBubble3.innerHTML.replace(/<br>/g," ");
+    console.log(tempStr);
+    document.getElementById("eventHead").innerHTML = tempStr;
+});
+
+
+console.log(subcontent1);
+subcontent4.addEventListener("click", function(){
+console.log("hello");
+    textbox.classList.remove("invisible");
+    blurDiv.classList.remove("invisible");
+    tempStr = eventBubble4.innerHTML.replace(/<br>/g," ");
+    console.log(tempStr);
+    document.getElementById("eventHead").innerHTML = tempStr;
+});
+
+subcontent5.addEventListener("click", function(){
+console.log("hello");
+    textbox.classList.remove("invisible");
+    blurDiv.classList.remove("invisible");
+    tempStr = eventBubble5.innerHTML.replace(/<br>/g," ");
+    document.getElementById("eventHead").innerHTML = tempStr;
+});
+
+subcontent6.addEventListener("click", function(){
+console.log("hello");
+    textbox.classList.remove("invisible");
+    blurDiv.classList.remove("invisible");
+    tempStr = eventBubble6.innerHTML.replace(/<br>/g," ");
+    document.getElementById("eventHead").innerHTML = tempStr;
+});
+
+blurDiv.addEventListener("click", function(){
+console.log("hello body");
+textbox.classList.add("invisible");
+    blurDiv.classList.add("invisible");
+
+});
+
+
+
+//Event Page On Click Ends
+
+//Event Page Click Functions starts
 
 function danceEvent()
 {
@@ -530,14 +549,9 @@ function danceEvent()
 
   eventBubble1.innerHTML = "Bollymania";
   eventBubble2.innerHTML = "Duet";//br front
-  eventBubble3.innerHTML = "Semi<br/>Classical<br/>Solo";
-  eventBubble5.innerHTML = "Street<br/>Dance";//br front
-  eventBubble6.innerHTML = "Folk<br/>Dance";
-
-  // eventBubble2.style.textAlign = "right";
-  // eventBubble3.style.textAlign = "right";
-  // eventBubble5.style.textAlign = "left";
-  // eventBubble6.style.textAlign = "left";
+  eventBubble3.innerHTML = "Semi<br>Classical<br>Solo";
+  eventBubble5.innerHTML = "Street<br>Dance";//br front
+  eventBubble6.innerHTML = "Folk<br>Dance";
 
   var img = document.getElementById("danceImage").getAttribute("src");
   console.log(img);
@@ -554,19 +568,14 @@ function theatreEvent()
   subcontent6.classList.remove("invisible");
 
   eventBubble1.innerHTML = "Street Play";
-  eventBubble2.innerHTML = "Stand <br/> Up <br/> Comedy";
-  eventBubble3.innerHTML = "<br/>Mime";//br front
-  eventBubble5.innerHTML = "One<br/>Act<br/>Play";
-  eventBubble6.innerHTML = "Mea <br/> Culpa";
-
-  // eventBubble2.style.textAlign = "right";
-  // eventBubble3.style.textAlign = "right";
-  // eventBubble5.style.textAlign = "left";
-  // eventBubble6.style.textAlign = "left";
+  eventBubble2.innerHTML = "Stand<br>Up<br>Comedy";
+  eventBubble3.innerHTML = "<br>Mime";//br front
+  eventBubble5.innerHTML = "One<br>Act<br>Play";
+  eventBubble6.innerHTML = "Mea<br>Culpa";
 
   var img = document.getElementById("theatreImage").getAttribute("src");
   console.log(img);
-  eventTransition(img, "danceImage");
+  eventTransition(img, "theatreImage");
 }
 
 function musicEvent()
@@ -579,19 +588,14 @@ function musicEvent()
   subcontent6.classList.remove("invisible");
 
   eventBubble2.innerHTML = "Sangam";
-  eventBubble3.innerHTML = "Light <br/> Indian <br/> Vocal";
-  eventBubble5.innerHTML = "Western <br/> Vocal";//br front
-  eventBubble6.innerHTML = "Folk <br/> Songs";
-
-  // eventBubble2.style.textAlign = "right";
-  // eventBubble3.style.textAlign = "right";
-  // eventBubble5.style.textAlign = "left";
-  // eventBubble6.style.textAlign = "left";
+  eventBubble3.innerHTML = "Light<br>Indian<br>Vocal";
+  eventBubble5.innerHTML = "Western<br>Vocal";//br front
+  eventBubble6.innerHTML = "Folk<br>Songs";
 
   eventBubble2.style
   var img = document.getElementById("musicImage").getAttribute("src");
   console.log(img);
-  eventTransition(img, "danceImage");
+  eventTransition(img, "musicImage");
 }
 
 function photoEvent()
@@ -604,13 +608,9 @@ function photoEvent()
   subcontent6.classList.add("invisible");
 
   eventBubble1.innerHTML = "Resurgence Cover Shot";
-  eventBubble3.innerHTML = "Short<br/>Film<br/>Making";
-  eventBubble5.innerHTML = "Advertisement<br/>Photo<br/>Presentation";
+  eventBubble3.innerHTML = "Short<br>Film<br>Making";
+  eventBubble5.innerHTML = "Advertisement<br>Photo<br>Presentation";
 
-  // eventBubble2.style.textAlign = "right";
-  // eventBubble3.style.textAlign = "right";
-  // eventBubble5.style.textAlign = "left";
-  // eventBubble6.style.textAlign = "left";
 
   var img = document.getElementById("photoImage").getAttribute("src");
   console.log(img);
@@ -626,19 +626,13 @@ function artEvent()
   subcontent5.classList.remove("invisible");
   subcontent6.classList.remove("invisible");
 
-  eventBubble2.innerHTML = "Artifact <br/> Painting";
-  eventBubble3.innerHTML = "<br/>Stippling";//br font
-  eventBubble5.innerHTML = "<br/>Graffiti";//br front
-  eventBubble6.innerHTML = "Theme <br/> Based </br> Painting";
-
-  // eventBubble2.style.textAlign = "right";
-  // eventBubble3.style.textAlign = "right";
-  // eventBubble5.style.textAlign = "left";
-  // eventBubble6.style.textAlign = "left";
-
+  eventBubble2.innerHTML = "Artifact<br>Painting";
+  eventBubble3.innerHTML = "<br>Stippling";//br font
+  eventBubble5.innerHTML = "<br>Graffiti";//br front
+  eventBubble6.innerHTML = "Theme<br>Based</br>Painting";
   var img = document.getElementById("artImage").getAttribute("src");
   console.log(img);
-  eventTransition(img, "danceImage");
+  eventTransition(img, "artImage");
 }
 
 function literatureEvent()
@@ -651,18 +645,14 @@ function literatureEvent()
   subcontent6.classList.remove("invisible");
 
   eventBubble1.innerHTML = "Creative Writing";
-  eventBubble2.innerHTML = "Debate <br/> (Hindi)";
-  eventBubble3.innerHTML = "Debate <br/> (English)";//br
-  eventBubble4.innerHTML = "<br/>Poetry (Hindi)";//br-2
-  eventBubble5.innerHTML = "Poetry <br/> (English)";//br
+  eventBubble2.innerHTML = "Debate<br>(Hindi)";
+  eventBubble3.innerHTML = "Debate<br>(English)";//br
+  eventBubble4.innerHTML = "<br>Poetry (Hindi)";//br-2
+  eventBubble5.innerHTML = "Poetry<br>(English)";//br
   eventBubble6.innerHTML = "Turn Coat";
-  // eventBubble2.style.textAlign = "right";
-  // eventBubble3.style.textAlign = "right";
-  // eventBubble5.style.textAlign = "left";
-  // eventBubble6.style.textAlign = "left";
   var img = document.getElementById("literatureImage").getAttribute("src");
   console.log(img);
-  eventTransition(img, "danceImage");
+  eventTransition(img, "literatureImage");
 }
 
 function specialEvent()
@@ -675,13 +665,8 @@ function specialEvent()
   subcontent6.classList.add("invisible");
 
   eventBubble1.innerHTML = "Fashion Show";
-  eventBubble3.innerHTML = "MOOT <br/> Court";//br
-  eventBubble5.innerHTML = "Youth<br/>Parliament";//br
-
-  // eventBubble2.style.textAlign = "right";
-  // eventBubble3.style.textAlign = "right";
-  // eventBubble5.style.textAlign = "left";
-  // eventBubble6.style.textAlign = "left";
+  eventBubble3.innerHTML = "MOOT<br>Court";//br
+  eventBubble5.innerHTML = "Youth<br>Parliament";//br
 
   var img = document.getElementById("specialImage").getAttribute("src");
   console.log(img);
@@ -693,6 +678,11 @@ function eventTransition(imgSrc, reqId)
   var out = document.getElementById("sliding-content-events-no-click");
   var inc = document.getElementById("sliding-content-events-click");
   document.getElementById("eventImg").src = imgSrc;
+
+  if(reqId == "literatureImage")
+  {
+    document.getElementById("eventImg").style.backgroundColor = "#a176ac";
+  }
 
   out.classList.add("animated");
   out.classList.add("zoomOut");
