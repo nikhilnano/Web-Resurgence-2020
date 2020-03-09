@@ -7,66 +7,45 @@ var currentPage = 1;
 var transition = 0;
 var body = document.getElementById("theBody");
 
+// window.addEventListener('mousewheel', function(e){
+//     wDelta = e.wheelDelta < 0 ? 'down' : 'up';
+//     console.log(wDelta);
+//     if(wDelta == 'down')
+//     {
+//       if(currentPage==1)
+//         events();
+//       else if(currentPage==2)
+//         team();
+//       else if(currentPage==3)
+//         about();
+//       else if(currentPage==4)
+//         contact();
+//       else if(currentPage==5)
+//         home();
+//     }
+//     else {
+//           if(currentPage==1)
+//             contact();
+//           else if(currentPage==2)
+//             home();
+//           else if(currentPage==3)
+//             events();
+//           else if(currentPage==4)
+//             team();
+//           else if(currentPage==5)
+//             about();
+//     }
+// });
 
-// //cursor animation starts
-// Create empty
-// var bubbletrail= {};
-//
-//
-//
-// // Add public parameters with default values
-// bubbletrail.size= 10;
-// bubbletrail.jitter= 50;
-// bubbletrail.zindex= 5;
-// bubbletrail.life= 1000;
-//
-//
-//
-// // Create after the page is loaded
-// window.onload= function() {
-// 	window.addEventListener('mousemove', function(e) {
-// 		// Animate one dot
-// 		var animate= function(i) {
-// 			var j= (1-i)*bubbletrail.jitter;
-// 			var bubble= document.createElement('div');
-// 			var size= Math.ceil(Math.random()*bubbletrail.size*i);
-// 			var sizepx= size+'px';
-// 			bubble.style.position= 'fixed';
-// 			bubble.style.top=  e.pageY +
-// 				Math.round((Math.random()-0.5)*j - size/2) + 'px';
-// 			bubble.style.left= e.pageX +
-// 				Math.round((Math.random()-0.5)*j - size/2) + 'px';
-// 			bubble.style.width= sizepx;
-// 			bubble.style.height= sizepx;
-// 			bubble.style.background= 'hsla(' +
-// 				Math.round(Math.random()*360) + ', ' +
-// 				'100%, ' +
-// 				'50%, ' +
-// 				i + ')';
-// 			bubble.style.borderRadius= sizepx;
-// 			bubble.style.pointerEvents= 'none';
-// 			bubble.style.zIndex= bubbletrail.zindex +
-// 				Math.round(5*(Math.random()-0.5));
-// 			document.body.appendChild(bubble);
-// 			window.setTimeout(function() {
-// 				document.body.removeChild(bubble);
-// 			}, Math.round(Math.random()*i*bubbletrail.life));
-// 		};
-// 		// Create a bunch of dots
-// 		for (var i= 0.2; i <= 1.0; i+= 0.2) {
-// 			animate(i);
-// 		}
-// 	});
-// };
+function scrollTransition(event) {
+  let direction = 0;
+  event.preventDefault();
+  console.log(direction);
+  direction += event.deltaY * -0.01;
 
-//cursor animation ends
+  console.log(direction);
 
-
-
-window.addEventListener('mousewheel', function(e){
-    wDelta = e.wheelDelta < 0 ? 'down' : 'up';
-    console.log(wDelta);
-    if(wDelta == 'down')
+  if(direction<0)
     {
       if(currentPage==1)
         events();
@@ -79,19 +58,21 @@ window.addEventListener('mousewheel', function(e){
       else if(currentPage==5)
         home();
     }
-    else {
-          if(currentPage==1)
-            contact();
-          else if(currentPage==2)
-            home();
-          else if(currentPage==3)
-            events();
-          else if(currentPage==4)
-            team();
-          else if(currentPage==5)
-            about();
+    else if (direction > 0) {
+
+                if(currentPage==1)
+                  contact();
+                else if(currentPage==2)
+                  home();
+                else if(currentPage==3)
+                  events();
+                else if(currentPage==4)
+                  team();
+                else if(currentPage==5)
+                  about();
     }
-});
+}
+window.onwheel = scrollTransition;
 
 function afterLoad()
 {
