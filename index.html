@@ -254,7 +254,7 @@
 			<span class='particle'></span>
 			<span class='particle'></span>
 			<span class='particle'></span> -->
-			<div class id="background-wrap" onclick="events()">
+			<div class id="background-wrap" onclick="eventBackClick()">
     		<!-- <div class="bubble" id="x1" onclick = "burst1()"></div>
     		<div class="bubble" id="x2" onclick = "burst2()"></div>
     		<div class="bubble " id="x3" onclick = "burst3()"></div>
@@ -271,7 +271,20 @@
 				<div class="bubble " id="x14" onclick = "burst14()"></div>
 				<div class="bubble " id="x15" onclick = "burst15()"></div> -->
 			</div>
-			<div class="windowspan" id="sliding-content-events-no-click">
+			<div class="windowspan" id="sliding-content-events-main">
+				<div class="interUniv" onclick="interUniv()">
+					<img src="images/testImage.png" class="compImage eventPage" id="interImage"/>
+					<p class="EventCaption eventPage">Inter-University</p>
+				</div>
+				<div class="intraUniv" onclick="intraUniv()">
+					<img src="images/testImage.png" class="compImage eventPage" id="intraImage"/>
+					<p class="EventCaption eventPage">Intra-University</p>
+				</div>
+		</div>
+		<div class="windowspan invisible" id="sliding-content-events-inter-univ">
+			<p class="ResugName GlowOnHover">Hume Baat Hi nahi Karni..</p>
+		</div>
+			<div class="windowspan invisible" id="sliding-content-events-no-click">
 				<div class="Dance" onclick="danceEvent()">
 					<img src="images/danceImage.gif" class="EventImages eventPage" id="danceImage"/>
 					<p class="EventCaption eventPage">Dance</p>

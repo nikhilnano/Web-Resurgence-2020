@@ -196,6 +196,27 @@
 	cursor: default;
 }
 
+.compImage {
+	width: 12vw;
+	height: 24vh;
+	border-radius: 50%;
+}
+.compImage:hover {
+	cursor: pointer;
+}
+
+.intraUniv {
+	left: 23vw;
+	top: 35vh;
+	position: fixed;
+}
+
+.interUniv{
+	left: 62vw;
+	top: 35vh;
+	position: fixed;
+}
+
 .Dance
 {
 	position: fixed;

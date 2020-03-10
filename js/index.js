@@ -6,14 +6,15 @@ var pageHit = 1;
 var currentPage = 1;
 var transition = 0;
 var body = document.getElementById("theBody");
+var eventPagePos = 0;
 
 function scrollTransition(event) {
   let direction = 0;
   // event.preventDefault();
-  console.log(direction);
+  // console.log(direction);
   direction += event.deltaY * -0.01;
 
-  console.log(direction);
+  // console.log(direction);
 
   if(direction<0)
     {
@@ -53,12 +54,12 @@ function afterLoad()
   const a = document.getElementById('loader');
   const c = document.getElementById('sliding-content-home');
   const d = document.getElementById('main-content');
-  console.log(a, c);
+  // console.log(a, c);
   a.classList.add("animated");
   a.classList.add("fadeOut");
-  console.log("Entering the animation");
-  a.addEventListener('animationend', function() {
-    console.log("Animation ended");
+  // console.log("Entering the animation");
+  function aAnimationEnds(){
+    // console.log("Animation ended");
     a.classList.add("invisible");
     d.classList.remove("invisible");
     c.classList.remove("invisible");
@@ -69,20 +70,14 @@ function afterLoad()
       c.classList.remove("fadeIn");
       // c.classList.remove("slower");
     });
-    // (function () {
-    //   document.getElementById("LandingVideo").addEventListener('ended',function() {
-    //       console.log('End');
-    //       var e = document.getElementById('LoopVideo');
-    //       b.classList.add('invisible');
-    //       e.classList.remove('invisible');
-    //   });
-    // }());
-  });
+    a.removeEventListener('animationend', aAnimationEnds)
+  }
+  a.addEventListener('animationend', aAnimationEnds);
 }
 
 document.addEventListener("DOMContentLoaded", function(event){
   document.getElementById("loadingVideo").addEventListener('ended',function() {
-    console.log("Hi");
+    // console.log("Hi");
     $(window).on("load", afterLoad());
 
   });
@@ -97,7 +92,7 @@ function home()
   document.getElementById("contactNav").classList.remove("underlineText");
   document.getElementById("sponsorNav").classList.remove("underlineText");
   if(transition == 0){
-    document.getElementById("topLogo").classList.add("invisible");
+    // document.getElementById("topLogo").classList.add("invisible");
     theBody.classList.remove("eventBody");
     theBody.classList.add("pageBody");
     theBody.classList.remove("cardBody");
@@ -108,6 +103,8 @@ function home()
 
 function events()
 {
+  eventPagePos = 0;
+
   document.getElementById("homeNav").classList.remove("underlineText");
   document.getElementById("eventsNav").classList.add("underlineText");
   document.getElementById("teamNav").classList.remove("underlineText");
@@ -115,13 +112,21 @@ function events()
   document.getElementById("contactNav").classList.remove("underlineText");
   document.getElementById("sponsorNav").classList.remove("underlineText");
 
-
   document.getElementById("topLogo").classList.remove("invisible");
+
+  document.getElementById("sliding-content-events-main").classList.remove("animated");
+  document.getElementById("sliding-content-events-main").classList.remove("fadeOut");
+  document.getElementById("sliding-content-events-main").classList.remove("invisible");
+  document.getElementById("sliding-content-events-inter-univ").classList.remove("animated");
+  document.getElementById("sliding-content-events-inter-univ").classList.remove("fadeIn");
+  document.getElementById("sliding-content-events-inter-univ").classList.add("invisible");
+
   document.getElementById("sliding-content-events-no-click").classList.remove("animated");
   document.getElementById("sliding-content-events-no-click").classList.remove("zoomOut");
-  document.getElementById("sliding-content-events-no-click").classList.remove("invisible");
+  document.getElementById("sliding-content-events-no-click").classList.remove("fadeIn");
+  document.getElementById("sliding-content-events-no-click").classList.add("invisible");
   document.getElementById("sliding-content-events-click").classList.remove("animated");
-  document.getElementById("sliding-content-events-click").classList.remove("zoomIn");
+  document.getElementById("sliding-content-events-click").classList.remove("fadeIn");
   document.getElementById("sliding-content-events-click").classList.add("invisible");
   document.getElementById("blurs").classList.add("invisible");
   document.getElementById("textbox").classList.add("invisible");
@@ -293,7 +298,10 @@ function pageTransition(){
         goToPage.classList.remove("invisible");
         //goToPage.classList.add("animated");
         //goToPage.classList.add(inAnimation);
-        goToPage.addEventListener('animationend', function(){
+
+        function afterAnimationEnds()
+        {
+          console.log("Hi I am called", goToPage);
           transition = 0;
           currentPage = pageHit;
           if(currentPage==4){
@@ -306,7 +314,10 @@ function pageTransition(){
           console.log("bye");
           stopAnimation(presentPage, goToPage, outAnimation, inAnimation);
           console.log("bye2");
-        });
+          goToPage.removeEventListener('animationend', afterAnimationEnds);
+        }
+
+        goToPage.addEventListener('animationend', afterAnimationEnds);
       }, 500);
     }());
   }
@@ -457,6 +468,46 @@ function burst15()
   }, 500);
 }
 
+//Event Main Page click Functions
+var mainEventPage = document.getElementById("sliding-content-events-main");
+var interUnivPage = document.getElementById("sliding-content-events-inter-univ");
+var intraUnivPage = document.getElementById("sliding-content-events-no-click");
+var intraUnivPage2 = document.getElementById("sliding-content-events-click");
+
+function interUniv()
+{
+  eventPagePos = 1;
+  mainEventPage.classList.add("animated");
+  mainEventPage.classList.add("fadeOut");
+  mainEventPage.classList.add("faster");
+  setTimeout(function() {
+    mainEventPage.classList.add("invisible");
+    interUnivPage.classList.remove("invisible");
+    interUnivPage.classList.add("animated");
+    interUnivPage.classList.add("fadeIn");
+    interUnivPage.classList.add("faster");
+  },500);
+}
+
+function intraUniv()
+{
+  eventPagePos = 2;
+  console.log("Hello 1 ",intraUnivPage);
+    console.log("Hello 1 ",intraUnivPage2);
+  mainEventPage.classList.add("animated");
+  mainEventPage.classList.add("fadeOut");
+  mainEventPage.classList.add("faster");
+  setTimeout(function() {
+    mainEventPage.classList.add("invisible");
+    intraUnivPage.classList.remove("invisible");
+    intraUnivPage.classList.add("animated");
+    intraUnivPage.classList.add("fadeIn");
+    intraUnivPage.classList.add("faster");
+    console.log("Hello 2",intraUnivPage);
+      console.log("Hello 2 ",intraUnivPage2);
+  }, 500);
+}
+
 //Event Page On click Starts
 var subcontent1 = document.getElementById("subcontent1");
 var subcontent2 = document.getElementById("subcontent2");
@@ -476,9 +527,9 @@ var textbox = document.getElementById("textbox");
 var blurDiv= document.getElementById('blurs');
 var tempStr;
 
-console.log(body);
+// console.log(body);
 subcontent1.addEventListener("click", function(){
-console.log("hello");
+// console.log("hello");
 textbox.classList.remove("invisible");
     blurDiv.classList.remove("invisible");
     tempStr = eventBubble1.innerHTML.replace(/<br>/g," ");
@@ -486,40 +537,40 @@ textbox.classList.remove("invisible");
 });
 
 
-console.log(subcontent1);
+// console.log(subcontent1);
 subcontent2.addEventListener("click", function(){
-console.log("hello");
+// console.log("hello");
     textbox.classList.remove("invisible");
     blurDiv.classList.remove("invisible");
-    console.log(document.getElementById("sliding-content-events"));
+    // console.log(document.getElementById("sliding-content-events"));
     tempStr = eventBubble2.innerHTML.replace(/<br>/g," ");
     document.getElementById("eventHead").innerHTML = tempStr;
 });
 
 
-console.log(subcontent1);
+// console.log(subcontent1);
 subcontent3.addEventListener("click", function(){
-console.log("hello");
+// console.log("hello");
     textbox.classList.remove("invisible");
     blurDiv.classList.remove("invisible");
     tempStr = eventBubble3.innerHTML.replace(/<br>/g," ");
-    console.log(tempStr);
+    // console.log(tempStr);
     document.getElementById("eventHead").innerHTML = tempStr;
 });
 
 
-console.log(subcontent1);
+// console.log(subcontent1);
 subcontent4.addEventListener("click", function(){
-console.log("hello");
+// console.log("hello");
     textbox.classList.remove("invisible");
     blurDiv.classList.remove("invisible");
     tempStr = eventBubble4.innerHTML.replace(/<br>/g," ");
-    console.log(tempStr);
+    // console.log(tempStr);
     document.getElementById("eventHead").innerHTML = tempStr;
 });
 
 subcontent5.addEventListener("click", function(){
-console.log("hello");
+// console.log("hello");
     textbox.classList.remove("invisible");
     blurDiv.classList.remove("invisible");
     tempStr = eventBubble5.innerHTML.replace(/<br>/g," ");
@@ -527,7 +578,7 @@ console.log("hello");
 });
 
 subcontent6.addEventListener("click", function(){
-console.log("hello");
+// console.log("hello");
     textbox.classList.remove("invisible");
     blurDiv.classList.remove("invisible");
     tempStr = eventBubble6.innerHTML.replace(/<br>/g," ");
@@ -535,13 +586,32 @@ console.log("hello");
 });
 
 blurDiv.addEventListener("click", function(){
-console.log("hello body");
+// console.log("hello body");
 textbox.classList.add("invisible");
     blurDiv.classList.add("invisible");
 
 });
 
-
+function eventBackClick()
+{
+  console.log(eventPagePos);
+  if(eventPagePos == 0 || eventPagePos == 1 || eventPagePos == 2)
+  {
+    events();
+  }
+  else if (eventPagePos == 3) {
+    eventPagePos = 2;
+    document.getElementById("sliding-content-events-no-click").classList.remove("animated");
+    document.getElementById("sliding-content-events-no-click").classList.remove("zoomOut");
+    document.getElementById("sliding-content-events-no-click").classList.remove("fadeIn");
+    document.getElementById("sliding-content-events-no-click").classList.remove("invisible");
+    document.getElementById("sliding-content-events-click").classList.remove("animated");
+    document.getElementById("sliding-content-events-click").classList.remove("fadeIn");
+    document.getElementById("sliding-content-events-click").classList.add("invisible");
+    document.getElementById("blurs").classList.add("invisible");
+    document.getElementById("textbox").classList.add("invisible");
+  }
+}
 
 //Event Page On Click Ends
 
@@ -563,7 +633,7 @@ function danceEvent()
   eventBubble6.innerHTML = "Folk<br>Dance";
 
   var img = document.getElementById("danceImage").getAttribute("src");
-  console.log(img);
+  // console.log(img);
   eventTransition(img, "danceImage");
 }
 
@@ -583,7 +653,7 @@ function theatreEvent()
   eventBubble6.innerHTML = "Mea<br>Culpa";
 
   var img = document.getElementById("theatreImage").getAttribute("src");
-  console.log(img);
+  // console.log(img);
   eventTransition(img, "theatreImage");
 }
 
@@ -603,7 +673,7 @@ function musicEvent()
 
   eventBubble2.style
   var img = document.getElementById("musicImage").getAttribute("src");
-  console.log(img);
+  // console.log(img);
   eventTransition(img, "musicImage");
 }
 
@@ -622,7 +692,7 @@ function photoEvent()
 
 
   var img = document.getElementById("photoImage").getAttribute("src");
-  console.log(img);
+  // console.log(img);
   eventTransition(img, "photoImage");
 }
 
@@ -640,7 +710,7 @@ function artEvent()
   eventBubble5.innerHTML = "<br>Graffiti";//br front
   eventBubble6.innerHTML = "Theme<br>Based</br>Painting";
   var img = document.getElementById("artImage").getAttribute("src");
-  console.log(img);
+  // console.log(img);
   eventTransition(img, "artImage");
 }
 
@@ -660,7 +730,7 @@ function literatureEvent()
   eventBubble5.innerHTML = "Poetry<br>(English)";//br
   eventBubble6.innerHTML = "Turn Coat";
   var img = document.getElementById("literatureImage").getAttribute("src");
-  console.log(img);
+  // console.log(img);
   eventTransition(img, "literatureImage");
 }
 
@@ -678,12 +748,13 @@ function specialEvent()
   eventBubble5.innerHTML = "Youth<br>Parliament";//br
 
   var img = document.getElementById("specialImage").getAttribute("src");
-  console.log(img);
+  // console.log(img);
   eventTransition(img, "specialImage");
 }
 
 function eventTransition(imgSrc, reqId)
 {
+  eventPagePos = 3;
   var out = document.getElementById("sliding-content-events-no-click");
   var inc = document.getElementById("sliding-content-events-click");
   document.getElementById("eventImg").src = imgSrc;
@@ -696,11 +767,14 @@ function eventTransition(imgSrc, reqId)
   out.classList.add("animated");
   out.classList.add("zoomOut");
   out.classList.add("faster");
-  out.addEventListener('animationend', function(){
+  function outAnimationEnd()
+  {
     out.classList.add("invisible");
     inc.classList.remove("invisible");
     inc.classList.add('animated');
     inc.classList.add('fadeIn');
     inc.classList.add('faster');
-  });
+    out.removeEventListener('animationend', outAnimationEnd);
+  }
+  out.addEventListener('animationend', outAnimationEnd);
 }
