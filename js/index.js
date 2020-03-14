@@ -783,11 +783,13 @@ function eventTransition(imgSrc, reqId)
 
 //contact
 document.getElementById("facebookDiv").addEventListener("click", function(){
-  window.location.href = "https://www.facebook.com/SMVDUresurgence/";
+  // window.location.href = "https://www.facebook.com/SMVDUresurgence/";
+  window.open('https://www.facebook.com/SMVDUresurgence/', '_blank');
 });
 
 document.getElementById("instaDiv").addEventListener("click", function(){
-  window.location.href = "https://www.instagram.com/smvduresurgence/?hl=en";
+  // window.location.href = "https://www.instagram.com/smvduresurgence/?hl=en";
+  window.open('https://www.instagram.com/smvduresurgence/?hl=en', '_blank');
 });
 
 document.getElementById("mailDiv").addEventListener("click",function(){
