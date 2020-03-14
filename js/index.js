@@ -85,6 +85,8 @@ document.addEventListener("DOMContentLoaded", function(event){
 
 function home()
 {
+  document.getElementById("topLogo").classList.add("invisible");
+
   document.getElementById("homeNav").classList.add("underlineText");
   document.getElementById("eventsNav").classList.remove("underlineText");
   document.getElementById("teamNav").classList.remove("underlineText");
@@ -778,3 +780,22 @@ function eventTransition(imgSrc, reqId)
   }
   out.addEventListener('animationend', outAnimationEnd);
 }
+
+//contact
+document.getElementById("facebookDiv").addEventListener("click", function(){
+  window.location.href = "https://www.facebook.com/SMVDUresurgence/";
+});
+
+document.getElementById("instaDiv").addEventListener("click", function(){
+  window.location.href = "https://www.instagram.com/smvduresurgence/?hl=en";
+});
+
+document.getElementById("mailDiv").addEventListener("click",function(){
+  const el = document.createElement('textarea');
+  el.value = "resurgence@smvdu.ac.in";
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+  alert("E-Mail ID copied to clipboard");
+});
