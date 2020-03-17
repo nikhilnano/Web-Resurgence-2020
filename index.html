@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/cards.css">
 	<link rel="stylesheet" type="text/css" href="css/homeBack.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
@@ -21,13 +22,14 @@
 	<div class="invisible" id="main-content">
 		<div id="topLogo" class="logo invisible" onclick="home()"> <img src="images/logo.png" class="navlogo"> </div>
 		<nav class="navbae" id="navbar">
-			<ul class="navmenu">
-				<li class="navitems underlineText" onclick="home()" id="homeNav">Home</li>
-				<li class="navitems" onclick="events()" id="eventsNav">Events</li>
-				<li class="navitems" onclick="team()" id="teamNav">Team</li>
-				<li class="navitems" onclick="about()" id="aboutNav">About Us</li>
-				<li class="navitems" onclick="contact()" id="contactNav">Contact Us</li>
-				<li class="navitems" onclick="sponsor()" id="sponsorNav">Sponsors</li>
+			<ul class="navmenu row container">
+				<li class="navitems col-sm-6"></li>
+				<li class="navitems underlineText col-sm-1" onclick="home()" id="homeNav">Home</li>
+				<li class="navitems col-sm-1" onclick="events()" id="eventsNav">Events</li>
+				<li class="navitems col-sm-1" onclick="team()" id="teamNav">Team</li>
+				<li class="navitems col-sm-1" onclick="about()" id="aboutNav">About Us</li>
+				<li class="navitems col-sm-1" onclick="contact()" id="contactNav">Contact Us</li>
+				<li class="navitems col-sm-1" onclick="sponsor()" id="sponsorNav">Sponsors</li>
 			</ul>
 		</nav>
 		<div class="windowspan invisible" id="sliding-content-home">
@@ -356,77 +358,77 @@
 			<p class="ResugName GlowOnHover">Coming Soon...</p>
 		</div>
 		<div class="windowspan invisible" id="sliding-content-about">
-			<div class="cards invisible" id="cardsMain">
-			  <div class="card">
-			    <div class="card-face">
-			      <div class="card-label">
+			<div class="card1s invisible" id="cardsMain">
+			  <div class="card1">
+			    <div class="card1-face">
+			      <div class="card1-label">
 			      </div>
 			    </div>
 			   </div>
-			  <div class="card">
-			    <div class="card-face">
-			      <div class="card-label">
+			  <div class="card1">
+			    <div class="card1-face">
+			      <div class="card1-label">
 			      </div>
 			    </div>
 			   </div>
-			  <div class="card">
-			    <div class="card-face">
-			      <div class="card-label">
+			  <div class="card1">
+			    <div class="card1-face">
+			      <div class="card1-label">
 							G
 			      </div>
 			    </div>
 			   </div>
-			  <div class="card">
-			    <div class="card-face">
-			      <div class="card-label">
+			  <div class="card1">
+			    <div class="card1-face">
+			      <div class="card1-label">
 							A
 			      </div>
 			    </div>
 			   </div>
-			  <div class="card">
-			    <div class="card-face">
-			      <div class="card-label">
+			  <div class="card1">
+			    <div class="card1-face">
+			      <div class="card1-label">
 							L
 			      </div>
 			    </div>
 			   </div>
-			  <div class="card">
-			    <div class="card-face">
-			      <div class="card-label">
+			  <div class="card1">
+			    <div class="card1-face">
+			      <div class="card1-label">
 							L
 			      </div>
 			    </div>
 			   </div>
-			  <div class="card">
-			    <div class="card-face">
-			      <div class="card-label">
+			  <div class="card1">
+			    <div class="card1-face">
+			      <div class="card1-label">
 							E
 			      </div>
 			    </div>
 			   </div>
-			  <div class="card">
-			    <div class="card-face">
-			      <div class="card-label">
+			  <div class="card1">
+			    <div class="card1-face">
+			      <div class="card1-label">
 							R
 			      </div>
 			    </div>
 			   </div>
-			  <div class="card">
-			    <div class="card-face">
-			      <div class="card-label">
+			  <div class="card1">
+			    <div class="card1-face">
+			      <div class="card1-label">
 							Y
 			      </div>
 			    </div>
 			   </div>
-			  <div class="card">
-			    <div class="card-face">
-			      <div class="card-label">
+			  <div class="card1">
+			    <div class="card1-face">
+			      <div class="card1-label">
 			      </div>
 			    </div>
 			   </div>
-			  <div class="card">
-			    <div class="card-face">
-			      <div class="card-label">
+			  <div class="card1">
+			    <div class="card1-face">
+			      <div class="card1-label">
 			      </div>
 			    </div>
 			   </div>
@@ -463,5 +465,6 @@
 		</div>
 	</div>
 	<script src="js/index.js"></script>
+	<script src="js/bootstrap.js"></script>
 </body>
 </html>
