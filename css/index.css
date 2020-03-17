@@ -48,9 +48,29 @@
 	text-align: center;
 }
 
+#eventBody {
+	font-family: "Amatic SC";
+	font-size: 1.5rem;
+	text-align: justify;
+	padding: 20px;
+	margin: 5px;
+	color: LightGrey;
+}
+
 /* Id Ends */
 
 /* Class Starts */
+
+.BoldText {
+	font-weight: bold;
+	color: LightGrey;
+}
+
+.quoteText {
+	text-align: center!important;
+	font-size: 1.25rem!important;
+	color: LightGrey;
+}
 
 .video
 {

@@ -760,10 +760,35 @@ function eventTransition(imgSrc, reqId)
   var out = document.getElementById("sliding-content-events-no-click");
   var inc = document.getElementById("sliding-content-events-click");
   document.getElementById("eventImg").src = imgSrc;
+  if(reqId == "danceImage")
+  {
+    document.getElementById("eventBody").innerHTML = "Gain confidence, flexibility and coordination while strengthening teamwork and creating many fun memories! Well Resurgence’20 brings to you the perfect opportunity to rise and shine with its exuberant dancing competition.<br><br><p class=\"BoldText\"> “You got it, You show it!”</p>";
+  }
+
+  if(reqId == "theatreImage")
+  {
+    document.getElementById("eventBody").innerHTML = "Get ready to explore the journey of theater through the world of performing arts and watch the greatest performers make their character immortal by taking up the opportunity to do right by the society in their “Alag Andaaz”.<br><br> Bahut hui baatien, now <p class=\"BoldText\">“IT’S SHOWTIME!”</p>";
+  }
+
+  if(reqId == "artImage")
+  {
+    document.getElementById("eventBody").innerHTML = "May the canvas of your life get painted with the sprinkle of hues which brings happiness, love, euphoria, harmony and gaiety within your soul. Get ready to spread the colour of joy and give a meaning to your creation.<br><br><p class=\"BoldText\"> “Aao nayi umang banaye, apni kala ko nayi pehchaan dilaye!”</p>";
+  }
+
+  if(reqId == "musicImage")
+  {
+    document.getElementById("eventBody").innerHTML = "Come and uncover the new and unexpected experience of the ultimate surreal power of music. Here we make music, we touch the taal! We create the beats and the crowd yells, “wah kamaal!”.<br><br>Resurgence’20 brings to you the power to say, <p class=\"BoldText\"> “Sangeet ke Tansen hai hum, kyunki humare suron mai hai dum!”</p>";
+  }
+
+  if(reqId == "photoImage")
+  {
+    document.getElementById("eventBody").innerHTML = "<p class=\"BoldText\"> “Imagination is the beginning of creation!”</p> <br> <p class = \"quoteText\"> - George Bernard Shaw – </p> <br><br> In this day and age, texts are reluctantly read and quickly flown over. With an image film you convey a message not only via texts, but also with images, speech, music and above all emotions. With your experience and knowledge, let’s strive to capture the stories in a totally unique way, absolutely Your Way!";
+  }
 
   if(reqId == "literatureImage")
   {
     document.getElementById("eventImg").style.backgroundColor = "#a176ac";
+    document.getElementById("eventBody").innerHTML = "We at Resurgence’20 aim to engage persuasive speakers, critical listeners, analytical thinkers and engaged citizens to use a range of debate, discussion, dialogue and inquiry as a part of both inspirational talk and rigorous treatise; we love all of the vibrant, active work going on inside the minds of our students...<br><br>But now it’s time to ,<p class=\"BoldText\"> “Step Up, Speak Up!”</p>";
   }
 
   out.classList.add("animated");
