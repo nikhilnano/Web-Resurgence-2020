@@ -70,7 +70,8 @@ function afterLoad()
       c.classList.remove("fadeIn");
       // c.classList.remove("slower");
     });
-    a.removeEventListener('animationend', aAnimationEnds)
+    a.removeEventListener('animationend', aAnimationEnds);
+    a.style.display = 'none';
   }
   a.addEventListener('animationend', aAnimationEnds);
 }
